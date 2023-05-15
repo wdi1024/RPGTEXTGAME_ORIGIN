@@ -3,9 +3,10 @@ package Game;
 import java.util.Scanner;
 
 public class Inn {
-	int charge = 0;
+	static int charge = 0;
+	static Scanner in = new Scanner(System.in);
 
-	void rest() {
+	static void rest() {
 		if (heroStatus.money > charge) {
 			if (heroStatus.hp != heroStatus.maxHp) {
 				charge++;
@@ -16,7 +17,7 @@ public class Inn {
 		}
 	}
 
-	void recoverSol() {
+	static void recoverSol() {
 		for (int i : heroStatus.solNum)
 			if (solClass.solClasses[i].solHp != solClass.solClasses[i].solMaxHp) {
 				solClass.solClasses[i].solHp = solClass.solClasses[i].solMaxHp;
@@ -25,17 +26,16 @@ public class Inn {
 				System.out.println(solClass.solClasses[i].solName + "의 체력이 최대치입니다.");
 	}
 
-	void checkMoney() {
+	static void checkMoney() {
 		System.out.println("현재 돈을 " + heroStatus.money + " 만큼 보유하고 있습니다.");
 	}
 
-	void takePrice() {
+	static void takePrice() {
 		System.out.println("숙박료를 " + charge + "만큼 지불했습니다.");
 		heroStatus.money -= charge;
 	}
 
-	void InnStart() {
-		Scanner in = new Scanner(System.in);
+	static void InnStart() {
 		while (true) {
 			int selection;
 			selection = in.nextInt();
