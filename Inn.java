@@ -12,8 +12,14 @@ public class Inn {
 				charge++;
 				heroStatus.hp += heroStatus.maxHp * 0.1;
 				System.out.println("체력이 " + (heroStatus.maxHp * 0.1) + "만큼 회복되었습니다.");
-			} else
+				System.out.println("=====================================");
+			} else {
 				System.out.println("체력이 최대치입니다.");
+				System.out.println("=====================================");
+			}
+		} else {
+			System.out.println("보유금액이 지불해야 할 금액보다 적거나 0입니다.");
+			System.out.println("=====================================");
 		}
 	}
 
@@ -22,23 +28,31 @@ public class Inn {
 			if (solClass.solClasses[i].solHp != solClass.solClasses[i].solMaxHp) {
 				solClass.solClasses[i].solHp = solClass.solClasses[i].solMaxHp;
 				System.out.println(solClass.solClasses[i].solName + "의 체력이 최대치로 회복되었습니다.");
-			} else
+				System.out.println("=====================================");
+			} else {
 				System.out.println(solClass.solClasses[i].solName + "의 체력이 최대치입니다.");
+				System.out.println("=====================================");
+			}
 	}
 
 	static void checkMoney() {
 		System.out.println("현재 돈을 " + heroStatus.money + " 만큼 보유하고 있습니다.");
+		System.out.println("=====================================");
 	}
 
 	static void takePrice() {
-		System.out.println("숙박료를 " + charge + "만큼 지불했습니다.");
 		heroStatus.money -= charge;
+		System.out.println("숙박료를 " + charge + "만큼 지불했습니다.");
+		System.out.println("=====================================");
 	}
 
 	static void InnStart() {
 		while (true) {
 			int selection;
+			System.out.println("1.캐릭터 회복\n2.용병 회복\n3.보유금액 확인\n4.숙박비 지불\n5.돌아가기");
+			System.out.printf("1~5 사이의 숫자를 입력하세요. : ");
 			selection = in.nextInt();
+			System.out.println("=====================================");
 			if (selection == 1)
 				rest();
 			else if (selection == 2)

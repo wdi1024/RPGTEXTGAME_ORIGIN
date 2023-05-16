@@ -14,15 +14,23 @@ public class Home {
 		System.out.printf("장소 번호를 입력하세요. : ");
 		map = in.nextInt();
 		if (map == 1) {
-			SelectingDungeon.StartSelectingDungeon();
+			System.out.println("=====================================");
+			// SelectingDungeon.StartSelectingDungeon();
 		} else if (map == 2) {
+			System.out.println("=====================================");
 			Shop.StartShop();
 		} else if (map == 3) {
-			SoldierCamp.StartSoldierCamp();
+			System.out.println("=====================================");
+			// SoldierCamp.StartSoldierCamp();
 		} else if (map == 4) {
+			System.out.println("=====================================");
 			Inn.InnStart();
 		} else if (map == 5) {
+			System.out.println("=====================================");
 			ItemAtHome.StartItemAtHome();
+		} else {
+			System.out.println("=====================================");
+			System.out.println("장소 목록의 번호를 입력해주세요.");
 		}
 	}
 
