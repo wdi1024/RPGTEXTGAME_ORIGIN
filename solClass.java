@@ -13,16 +13,16 @@ public class solClass {
 
 	}
 
-	public solClass solClasses(int solNum) {
-		if (solNum == 1) {
+	public solClass solClasses(int Num) {
+		if (Num == 1) {
 			solName = "하급 전사";// hp,mp는 여기에 넣으면 초기화 되니까 일단 빼놓음
-			solMaxHp = heroStaus.level * 30 + 100;
-			solHp = heroStaus.level * 30 + 100;
-			solMaxMp = heroStaus.level * 2 + 6;
-			solMp = heroStaus.level * 2 + 6;
-			solPower = heroStaus.level * 50 + 110;
+			solMaxHp = heroStaus.level * 10 + 50;
+			solHp = heroStaus.level * 10 + 50;
+			solMaxMp = heroStaus.level * 1 + 6;
+			solMp = heroStaus.level * 1 + 6;
+			solPower = heroStaus.level * 2 + 10;
 			solMagic = 0;
-			this.solNum = 1;
+			solNum = 1;
 			return this;
 		}
 
