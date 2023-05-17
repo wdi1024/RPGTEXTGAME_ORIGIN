@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class heroStatus {
 	static String name, job;
 	static int hp, maxHp, mp, maxMp, power, magic, selection = 0, hiredSoldierCnt = 0, money = 0, exp = 0, level = 1;
-	static ArrayList<Integer> solNum = new ArrayList<>();
+	static ArrayList<solClass> solNum = new ArrayList<solClass>();
 	static Scanner in = new Scanner(System.in);
 
 	static void setName() {

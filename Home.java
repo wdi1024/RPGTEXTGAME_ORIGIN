@@ -33,6 +33,10 @@ public class Home {
 	}
 
 	public static void main(String[] args) {
+		for (int i = 0; i < 10; i++) {
+			heroStatus.solNum.add(new solClass(i + 1));
+		}
+
 		System.out.println("RPG TEXT GAME에 오신 것을 환영합니다.");
 		System.out.printf("우선 ");
 		heroStatus.setName();
