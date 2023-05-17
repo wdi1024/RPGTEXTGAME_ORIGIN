@@ -1,5 +1,3 @@
-package Game;
-
 public class solClass {
 	static String solName;
 	static int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;

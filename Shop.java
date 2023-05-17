@@ -1,5 +1,3 @@
-package Game;
-
 import java.util.Scanner;
 //안녕, dkdk
 
