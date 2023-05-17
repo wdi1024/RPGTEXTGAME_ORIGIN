@@ -10,12 +10,14 @@ public class heroStatus {
 	static Scanner in = new Scanner(System.in);
 
 	static void setName() {
-		String good = "0";
-		while (!good.equals("y")) {
+		int good = 0;
+		while (good != 1) {
 			System.out.printf("캐릭터의 이름을 입력하세요 : ");
 			name = in.nextLine();
-			System.out.println("캐릭터의 이름으로 " + name + "을 사용하시겠습니까? y/n");
-			good = in.nextLine();
+			System.out.print("캐릭터의 이름으로 " + name + "을 사용하시겠습니까?(네:1 아니요:2 입력) : ");
+			good = in.nextInt();
+			if (good != 1 && good != 2)
+				System.out.println("네:1 아니요:2 중에서 입력해주세요.");
 		}
 		System.out.println("==============================================");
 	}

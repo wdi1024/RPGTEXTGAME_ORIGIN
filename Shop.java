@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class Shop {
 	static int selectshop;
 	static Scanner in = new Scanner(System.in);
+	static MyInventory k = new MyInventory();
 
 	static boolean checkMind() {
-		String checkmind;
-		System.out.printf("해당 물품을 구매/판매하시겠습니까? y/n");
-		checkmind = in.next();
-		if (checkmind.equals("y"))
+		int checkmind;
+		System.out.printf("해당 물품을 구매/판매하시겠습니까? (네:1 아니요:2 입력) : ");
+		checkmind = in.nextInt();
+		if (checkmind == 1)
 			return true;
 		else
 			return false;
@@ -19,7 +20,7 @@ public class Shop {
 
 	static void buyOrSell() {
 		int buyorsell;
-		int productnum;
+		int productnum, productcnt;
 		while (true) {
 			System.out.println("1.구매\n2.판매\n3.돌아가기");
 			System.out.printf("행동 번호를 입력하세요. :");
@@ -27,18 +28,41 @@ public class Shop {
 			System.out.println("=====================================");
 			if (buyorsell == 3)
 				break;
-			while (true) {
-				System.out.println("1. \n2. \n3.\n4.\n5.\n6. \n7. \n8. \n9. \n10. \n");
-				System.out.printf("구매/판매할 물품 번호를 입력하세요. :");
-				productnum = in.nextInt();
-				if (productnum == 10)
-					break;
-				if (checkMind()) {
-					if (buyorsell == 1)
-						MyInventory.addItem(productnum);
-					else
-						MyInventory.outItem(productnum);
-
+			else if (buyorsell == 1) {
+				while (true) {
+					System.out.println("0.돌아가기");
+					MyInventory.printInventory();
+					System.out.println("=====================================");
+					System.out.printf("구매할 물품 번호를 입력하세요. :");
+					productnum = in.nextInt();
+					if (productnum == 0) {
+						System.out.println("=====================================");
+						break;
+					}
+					System.out.printf("구매할 물건 개수를 입력하세요. :");
+					productcnt = in.nextInt();
+					System.out.println("=====================================");
+					if (checkMind()) {
+						MyInventory.addItem(productnum, productcnt);
+					}
+				}
+			} else if (buyorsell == 2) {
+				while (true) {
+					System.out.println("0.돌아가기");
+					MyInventory.printInventory();
+					System.out.println("=====================================");
+					System.out.printf("판매할 물품 번호를 입력하세요. :");
+					productnum = in.nextInt();
+					if (productnum == 0) {
+						System.out.println("=====================================");
+						break;
+					}
+					System.out.printf("판매할 물건 개수를 입력하세요. :");
+					productcnt = in.nextInt();
+					System.out.println("=====================================");
+					if (checkMind()) {
+						MyInventory.outItem(productnum, productcnt);
+					}
 				}
 			}
 		}
@@ -52,9 +76,8 @@ public class Shop {
 			System.out.println("=====================================");
 			if (selectshop == 1)
 				buyOrSell();
-			else if (selectshop == 2) {
-			}
-			// MyInventory.printInventory();
+			else if (selectshop == 2)
+				MyInventory.printInventory();
 			else if (selectshop == 3)
 				break;
 			else

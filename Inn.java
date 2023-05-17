@@ -50,7 +50,7 @@ public class Inn {
 		while (true) {
 			int selection;
 			System.out.println("1.캐릭터 회복\n2.용병 회복\n3.보유금액 확인\n4.숙박비 지불\n5.돌아가기");
-			System.out.printf("1~5 사이의 숫자를 입력하세요. : ");
+			System.out.printf("행동 번호를 입력하세요. :");
 			selection = in.nextInt();
 			System.out.println("=====================================");
 			if (selection == 1)
