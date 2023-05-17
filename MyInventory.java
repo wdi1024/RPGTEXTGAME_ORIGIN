@@ -28,7 +28,7 @@ public class MyInventory {
 		}
 
 		for (int i = 0; i < skillbook.size(); i++) {//스킬북 번호는 그냥 포션 뒤에 얻는 순서대로 배당
-			System.out.println((i + 6) + "." + skillbook.get(i));
+			System.out.println((i + 7) + "." + skillbook.get(i));
 		}
 	}
 
@@ -133,8 +133,8 @@ public class MyInventory {
 		} else if (itemNum == 6) {
 			if (magicPotionCnt >= 1) {
 				magicPotionCnt -= 1;
-			} else if (itemNum > 6) {//아이템 넘버에 -6해서 skillbook의 인덱스로 변환
-				skillbook.remove(itemNum - 6);
+			} else if (itemNum > 6) {//아이템 넘버에 -7해서 skillbook의 인덱스로 변환
+				skillbook.remove(itemNum - 7);
 			}
 		} else {
 			System.out.println("해당 번호의 아이템은 존재하지 않습니다");
