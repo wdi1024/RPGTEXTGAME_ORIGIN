@@ -3,7 +3,7 @@ package Game;
 public class solClass {
 	static String solName;
 	static int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;
-
+// 나는 바보다
 	void printSolStatus() {
 		System.out.println("이름 : " + solName);
 		System.out.println("체력 : " + solHp + " 최대체력 : " + solMaxHp);
