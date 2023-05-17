@@ -1,6 +1,7 @@
 package Game;
 
 import java.util.Scanner;
+//안녕
 
 public class Shop {
 	static int selectshop;
