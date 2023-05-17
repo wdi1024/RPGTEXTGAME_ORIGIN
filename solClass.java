@@ -1,6 +1,6 @@
 public class solClass {
-	static String solName;
-	static int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;
+	String solName;
+	int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;
 
 // 나는 바보다, 진짜
 	void printSolStatus() {

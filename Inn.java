@@ -22,13 +22,13 @@ public class Inn {
 	}
 
 	static void recoverSol() {
-		for (int i : heroStatus.solNum)
-			if (solClass.solClasses[i].solHp != solClass.solClasses[i].solMaxHp) {
-				solClass.solClasses[i].solHp = solClass.solClasses[i].solMaxHp;
-				System.out.println(solClass.solClasses[i].solName + "의 체력이 최대치로 회복되었습니다.");
+		for (int i = 0; i < heroStatus.solNum.size(); i++)
+			if (heroStatus.solNum.get(i).solHp != heroStatus.solNum.get(i).solMaxHp) {
+				heroStatus.solNum.get(i).solHp = heroStatus.solNum.get(i).solMaxHp;
+				System.out.println(heroStatus.solNum.get(i).solName + "의 체력이 최대치로 회복되었습니다.");
 				System.out.println("=====================================");
 			} else {
-				System.out.println(solClass.solClasses[i].solName + "의 체력이 최대치입니다.");
+				System.out.println(heroStatus.solNum.get(i).solName + "의 체력이 최대치입니다.");
 				System.out.println("=====================================");
 			}
 	}
