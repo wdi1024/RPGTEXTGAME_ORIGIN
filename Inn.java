@@ -6,10 +6,13 @@ public class Inn {
 
 	static void rest() {
 		if (heroStatus.money > charge) {
-			if (heroStatus.hp != heroStatus.maxHp) {
+			if (heroStatus.hp < heroStatus.maxHp) {
 				charge++;
-				heroStatus.hp += heroStatus.maxHp * 0.1;
-				System.out.println("체력이 " + (heroStatus.maxHp * 0.1) + "만큼 회복되었습니다.");
+				int heal = heroStatus.maxHp / 10;
+				if (heroStatus.hp + heal > heroStatus.maxHp)
+					heal = heroStatus.maxHp - heroStatus.hp;
+				heroStatus.hp += heal;
+				System.out.println("체력이 " + heal + "만큼 회복되었습니다.");
 				System.out.println("=====================================");
 			} else {
 				System.out.println("체력이 최대치입니다.");
