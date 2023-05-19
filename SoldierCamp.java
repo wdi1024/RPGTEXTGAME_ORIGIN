@@ -49,7 +49,7 @@ public class SoldierCamp {
 					if (hs == unhiredSoldier.size())
 						break;
 					else if (hs < unhiredSoldier.size()) {
-						if (heroStatus.hiredSoldierCnt <= 5) {
+						if (heroStatus.solNum.size() <= 5) {
 							System.out.println(unhiredSoldier.get(hs) + "을(를) 고용했습니다.");
 							heroStatus.solNum.add(unhiredSoldier.get(hs));
 							unhiredSoldier.remove(hs);

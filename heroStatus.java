@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class heroStatus {
 	static String name, job;
-	static int hp, maxHp, mp, maxMp, power, magic, selection = 0, hiredSoldierCnt = 0, money = 0, exp = 0, level = 1;
+	static int hp, maxHp, mp, maxMp, power, magic, selection = 0, money = 0, exp = 0, level = 1;
 	static ArrayList<solClass> solNum = new ArrayList<solClass>();
 	static Scanner in = new Scanner(System.in);
 
@@ -63,7 +63,7 @@ public class heroStatus {
 		}
 	}
 
-	void printStatus() {
+	static void printStatus() {
 		System.out.println("이름 : " + name);
 		System.out.println("직업 : " + job);
 		System.out.println("레벨 : " + level);
@@ -71,7 +71,7 @@ public class heroStatus {
 		System.out.println("체력 : " + mp + " 최대체력 : " + maxMp);
 		System.out.println("힘 : " + power);
 		System.out.println("마력 : " + magic);
-		System.out.println("동행 용병 수 : " + hiredSoldierCnt);
+		System.out.println("동행 용병 수 : " + heroStatus.solNum.size());
 		System.out.println("돈 : " + money);
 		System.out.println("경험치 : " + exp);
 		System.out.println("==============================================");
