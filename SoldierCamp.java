@@ -33,7 +33,7 @@ public class SoldierCamp {
 
 	static void StartSoldierCamp() {
 		while (true) {
-			int sel;
+			int sel, price = 100;
 			System.out.println("1.용병고용 \n2.용병대기소 \n3.용병해고 \n4.동행중인 용병확인\n5.대기중인 용병확인\n6.돌아가기");
 			System.out.printf("행동 번호를 입력하세요. : ");
 			sel = sc.nextInt();
@@ -43,19 +43,33 @@ public class SoldierCamp {
 				while (true) {
 					checkUnhiredSoldier();
 					System.out.println(unhiredSoldier.size() + ". 돌아가기");
+					System.out.println("하급 용병은 100, 중급 용병은 500, 상급 용병은 1000을 지불하면 고용할 수 있습니다.");
 					System.out.printf("용병 번호를 입력하세요. : ");
 					int hs = sc.nextInt();
 					System.out.println("=====================================");
 					if (hs == unhiredSoldier.size())
 						break;
 					else if (hs < unhiredSoldier.size()) {
-						if (heroStatus.solNum.size() <= 5) {
-							System.out.println(unhiredSoldier.get(hs) + "을(를) 고용했습니다.");
-							heroStatus.solNum.add(unhiredSoldier.get(hs));
-							unhiredSoldier.remove(hs);
-							System.out.println("=====================================");
+						if (unhiredSoldier.get(hs).solName.charAt(0) == '하')
+							price = 100;
+						else if (unhiredSoldier.get(hs).solName.charAt(0) == '중')
+							price = 500;
+						else if (unhiredSoldier.get(hs).solName.charAt(0) == '상')
+							price = 1000;
+
+						if (heroStatus.money >= price) {
+							if (heroStatus.solNum.size() <= 5) {
+								System.out.println(unhiredSoldier.get(hs) + "을(를) 고용했습니다.");
+								heroStatus.solNum.add(unhiredSoldier.get(hs));
+								unhiredSoldier.remove(hs);
+								heroStatus.money -= price;
+								System.out.println("=====================================");
+							} else {
+								System.out.println("동행 가능한 최대 인원수입니다.\n용병대기소에 용병을 대기시키거나 해고하십시오.");
+								System.out.println("=====================================");
+							}
 						} else {
-							System.out.println("동행 가능한 최대 인원수입니다.\n용병대기소에 용병을 대기시키거나 해고하십시오.");
+							System.out.println("보유 금액이 모자랍니다.");
 							System.out.println("=====================================");
 						}
 					} else {
@@ -126,6 +140,7 @@ public class SoldierCamp {
 				while (true) {
 					checkHiredSoldier();
 					System.out.println(heroStatus.solNum.size() + ". 돌아가기");
+					System.out.println("용병 해고 시 용병 고용비를 환불해드리지 않습니다.");
 					System.out.printf("해고할 용병 번호를 입력하세요. : ");
 					int fs = sc.nextInt();
 					if (fs < heroStatus.solNum.size()) {

@@ -134,11 +134,14 @@ public class Shop {
 			System.out.println("=====================================");
 			if (selectshop == 1)
 				buyOrSell();
-			else if (selectshop == 2)
+			else if (selectshop == 2) {
 				MyInventory.printInventory();
-			else if (selectshop == 3)
+				System.out.println("=====================================");
+			} else if (selectshop == 3) {
+				System.out.println("왔던 곳으로 돌아갑니다.");
+				System.out.println("=====================================");
 				break;
-			else
+			} else
 				System.out.println("장소 목록 내의 번호를 입력해주세요.");
 
 		}
