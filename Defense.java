@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Defense {// 아직 안 올림
 	static int selectMove;
+	int MonsterPower=100;
 
 	static void StartDefense() {
 		Scanner in = new Scanner(System.in);
