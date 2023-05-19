@@ -4,8 +4,6 @@ import java.util.Scanner;
 public class SoldierCamp {
 	static ArrayList<solClass> unhiredSoldier = new ArrayList<solClass>();
 	static ArrayList<solClass> waitingSoldier = new ArrayList<solClass>();
-	static int waitingCnt = waitingSoldier.size(),
-			hiredSoldierCnt = heroStatus.hiredSoldierCnt + SoldierCamp.waitingCnt;
 	static Scanner sc = new Scanner(System.in);
 
 	static void checkUnhiredSoldier() {
