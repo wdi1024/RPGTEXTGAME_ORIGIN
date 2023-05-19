@@ -19,7 +19,7 @@ public class Home {
 			Shop.StartShop();
 		} else if (map == 3) {
 			System.out.println("=====================================");
-			// SoldierCamp.StartSoldierCamp();
+			SoldierCamp.StartSoldierCamp();
 		} else if (map == 4) {
 			System.out.println("=====================================");
 			Inn.InnStart();
@@ -34,7 +34,7 @@ public class Home {
 
 	public static void main(String[] args) {
 		for (int i = 0; i < 10; i++) {
-			heroStatus.solNum.add(new solClass(i + 1));
+			SoldierCamp.unhiredSoldier.add(new solClass(i + 1));
 		}
 
 		System.out.println("RPG TEXT GAME에 오신 것을 환영합니다.");
