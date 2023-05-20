@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;//selectingDungeon의 monsterStatus와 연계필요
 
 public class HeroAttack {
@@ -110,11 +111,27 @@ public class HeroAttack {
 
 	// 히어로 어택드에서 solclass와 연계필요
 	static void heroAttacked(int sum) {
+		Random r = new Random();
 		if (sum < 0) {
 			sum = 0;
 		}
-		heroStatus.hp = heroStatus.hp - sum;
-		System.out.println(heroStatus.name + "의 데미지는 " + sum + "입니다");
+		while (true) {// 적이 난수에 따라 용병이나 플레이어 공격하도록 변경, 플레이어 공격시 hp 떨어진 용병 공격 못하게 할 필요있음
+			int target = r.nextInt(heroStatus.solNum.size());
+			if (target == heroStatus.solNum.size()) {
+				System.out.println(MonsterName + "이 " + heroStatus.name + "를 공격!");
+				heroStatus.hp = heroStatus.hp - sum;
+				System.out.println(heroStatus.name + "의 데미지는 " + sum + "입니다");
+			} else if (heroStatus.solNum.get(target).solHp > 0) {
+				System.out.println(MonsterName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
+				heroStatus.solNum.get(target).solHp -= sum;
+				System.out.println(heroStatus.solNum.get(target).solName + "의 데미지는 " + sum + "입니다");
+				if (heroStatus.solNum.get(target).solHp <= 0) {
+					System.out.println(heroStatus.solNum.get(target).solName + "이 쓰러졌습니다!");
+				}
+			} else {
+				continue;
+			}
+		}
 
 	}
 
