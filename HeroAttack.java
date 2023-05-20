@@ -9,14 +9,16 @@ public class HeroAttack {
 			System.out.println("0.돌아가기");
 			System.out.println("1.공격");
 			System.out.println("공격하시겠습니까? :");
+			System.out.println("=====================================");
 			selectMove = in.nextInt();
 			if (selectMove == 0) {
 				break;
 			} else {
 				System.out.println(heroStatus.name + "의 공격입니다");
 				monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
-				System.out.println(//monsterName + "의 공격입니다");
-				heroAttacked(monsterAttack(//monsterPower));
+				System.out.println(monsterName + "의 공격입니다");
+				heroAttacked(monsterAttack(monsterPower));
+				System.out.println("=====================================");
 				break;
 			}
 
@@ -41,6 +43,7 @@ public class HeroAttack {
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
 				int attackSelet = in.nextInt();
+				System.out.println("=====================================");
 				if (attackSelet == 1) {
 					System.out.println("쓰러스트 공격!");
 					sum = heroStatus.power * 20 + heroStatus.level * 10;
@@ -98,8 +101,8 @@ public class HeroAttack {
 
 	static int monsterAttack(int monster_power) {
 		int sum = 0;
-		if (monster_power<0) {
-			monster_power=0;
+		if (monster_power < 0) {
+			monster_power = 0;
 		}
 		sum = monster_power;
 		return sum;
@@ -107,6 +110,9 @@ public class HeroAttack {
 
 	// 히어로 어택드에서 solclass와 연계필요
 	static void heroAttacked(int sum) {
+		if (sum < 0) {
+			sum = 0;
+		}
 		heroStatus.hp = heroStatus.hp - sum;
 		System.out.println(heroStatus.name + "의 데미지는 " + sum + "입니다");
 
