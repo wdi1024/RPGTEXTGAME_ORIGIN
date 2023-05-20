@@ -12,6 +12,7 @@ public class ItemAtHome {
 			System.out.println("=====================================");
 			System.out.printf("사용할 아이템 번호를 입력하세요. :");
 			selectItem = in.nextInt();
+			System.out.println("=====================================");
 			if (selectItem == 0)
 				break;
 			else if (selectItem <= (6 + MyInventory.skillbook.size())) {
