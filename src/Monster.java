@@ -96,12 +96,13 @@ class Cat extends Monster {
 
 class Goblin extends Monster {
     public Goblin() {
-        super("고블린", 80, 15);
+    	super("살쾡이", 100, 30, 10, 10, 10);
     }
+}
 
-    @Override
-    public void attack() {
-        System.out.println(getName() + "이(가) 창을 휘두르며 공격합니다!");
+class Dragon extends Monster {
+    public Dragon() {
+    	super("철갑드래곤", 1000, 30, 10, 10, 10);
     }
 }
 

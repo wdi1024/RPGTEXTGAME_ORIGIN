@@ -10,12 +10,12 @@ public class Fight {
 		System.out.println("몬스터와 조우했습니다.");
 		while (true) {
 			// 행동 선택;
-			int selection = in.nextInt();
 			System.out.println("1. 전투 개시");
 			System.out.println("2. 아이템 사용");
 			System.out.println("3. 방어");
 			System.out.println("4. 후퇴");
 			System.out.println("어떻게 하시겠습니까?");
+			int selection = in.nextInt();
 			if (selection == 1) {
 				HeroAttack.StartHeroAttack();
 			}
@@ -33,28 +33,21 @@ public class Fight {
 			else {
 				System.out.println("리스트에서 선택해주세요.");
 			}
-			if (monster_hp <= 0) {
-				Thread.sleep(1500);
-				System.out.println("\n" + monster_name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
-				hero_experience += monster_experience;
-				hero_money += monster_money;
+			if (Monster.monsHp <= 0) {
+				System.out.println("\n" + Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+				heroStatus.exp += Monster.monsExp;
+				heroStatus.money += Monster.monsMoney;
 				break;
-			
-			if (hero_hp <= 0) {
-				Thread.sleep(1500);
-				System.out.println("\n" + hero_name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
-				hero_hp = 1;
-				Thread.sleep(1000);
-				System.out.println(".");
-				Thread.sleep(1000);
-				System.out.println(".");
-				Thread.sleep(1000);
-				System.out.println(".");
-				Thread.sleep(1000);
-				System.out.println("!!! 신의 은총을 받아 " + hero_name + "이(가) 부활했습니다. !!!");
+			}
+			if (heroStatus.hp <= 0) {
+				System.out.println("\n" + heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+				heroStatus.hp = 1;
+				heroStatus.money *= heroStatus.money*1/2;
+				System.out.println("!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");
+				System.out.println("돈의 50%가 삭감됐습니다.");
+				System.out.println("Home으로 되돌아왔습니다.");
 				break;
-			
-			
+			}
 		}
 	}
 }
