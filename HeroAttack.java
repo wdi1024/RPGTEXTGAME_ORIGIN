@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;//selectingDungeon의 monsterStatus와 연계필요
 
 public class HeroAttack {
-	static int selectMove;
+	static int selectMove, attackSelet;
 
 	static void StartHeroAttack() {
 		Scanner in = new Scanner(System.in);
@@ -43,7 +43,7 @@ public class HeroAttack {
 					System.out.println("4.전사 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
-				int attackSelet = in.nextInt();
+				attackSelet = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelet == 1) {
 					System.out.println("쓰러스트 공격!");
