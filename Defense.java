@@ -19,8 +19,7 @@ public class Defense {// 아직 안 올림
 				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					sum += heroStatus.solNum.get(i).solPower + heroStatus.solNum.get(i).solMagic;
 				}
-				HeroAttack.heroAttacked(
-						HeroAttack.monsterAttack(MonsterPower - (heroStatus.power + heroStatus.magic + sum)));
+				HeroAttack.heroAttacked(Monster.monsterAttack(MonsPower - (heroStatus.power + heroStatus.magic + sum)));
 				break;
 			} else {
 				System.out.println("알맞은 번호를 입력해주세요.");

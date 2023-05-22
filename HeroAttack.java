@@ -18,7 +18,7 @@ public class HeroAttack {
 				System.out.println(heroStatus.name + "의 공격입니다");
 				Monster.monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
 				System.out.println(monsterName + "의 공격입니다");
-				heroAttacked(Monster.monsterAttack(Monster.monsterPower));
+				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				System.out.println("=====================================");
 				break;
 			}
