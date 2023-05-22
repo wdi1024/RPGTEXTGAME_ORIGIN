@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Run {
 
-	static void checkRun() {
+	static boolean checkRun() {
 		if (SelectingDungeon.isItBossDungeon == false) {
-			canRun();
+			return canRun();
 		} else {
-			canNotRun();
+			return canNotRun();
 		}
 	}
 
