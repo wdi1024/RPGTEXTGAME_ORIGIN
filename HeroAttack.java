@@ -16,9 +16,9 @@ public class HeroAttack {
 				break;
 			} else {
 				System.out.println(heroStatus.name + "의 공격입니다");
-				monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
+				Monster.monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
 				System.out.println(monsterName + "의 공격입니다");
-				heroAttacked(monsterAttack(monsterPower));
+				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				System.out.println("=====================================");
 				break;
 			}
@@ -100,15 +100,6 @@ public class HeroAttack {
 		return sum;
 	}
 
-	static int monsterAttack(int monster_power) {
-		int sum = 0;
-		if (monster_power < 0) {
-			monster_power = 0;
-		}
-		sum = monster_power;
-		return sum;
-	}
-
 	// 히어로 어택드에서 solclass와 연계필요
 	static void heroAttacked(int sum) {
 		Random r = new Random();
@@ -134,16 +125,4 @@ public class HeroAttack {
 		}
 
 	}
-
-	static void monsterAttacked(int sum) {
-
-		if (monsterDefense >= sum) {
-			System.out.println(monsterName + "의 데미지는 0입니다");
-			monsterHp = monsterHp - 0;
-		} else {
-			monsterHp = monsterHp + monsterDefense - sum;
-			System.out.println(monsterName + "의 데미지는 " + sum + "입니다");
-		}
-	}
-
 }
