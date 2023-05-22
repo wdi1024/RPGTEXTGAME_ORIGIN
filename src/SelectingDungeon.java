@@ -24,7 +24,7 @@ public class SelectingDungeon {
 				Fight.selectAttack();
 			}
 			if (dungeonNum == 3) {
-				System.out.println("----- (보스) 파괴의 사원 -----.");
+				System.out.println("----- ㅇㅇㅇㅇ(보스) 파괴의 사원 -----.");
 				isItBossDungeon = true;
 				Fight.selectAttack();
 			}
