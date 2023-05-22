@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Run {
 
 	void checkRun() {
-		if (SelectingDungeon.isItBossDungeon == true) {
+		if (SelectingDungeon.isItBossDungeon == false) {
 			canRun();
 		} else {
 			canNotRun();
