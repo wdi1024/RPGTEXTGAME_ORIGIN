@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Run {
 
-	void checkRun() {
+	static void checkRun() {
 		if (SelectingDungeon.isItBossDungeon == false) {
 			canRun();
 		} else {
@@ -10,7 +10,7 @@ public class Run {
 		}
 	}
 
-	boolean canRun() {
+	static boolean canRun() {
 		Scanner in = new Scanner(System.in);
 		System.out.print("홈으로 도망가시겠습니까?(네:1 아니요:2 입력) : ");
 		int answer = in.nextInt();
@@ -25,7 +25,7 @@ public class Run {
 		}
 	}
 
-	boolean canNotRun() {
+	static boolean canNotRun() {
 		System.out.print("보스에게서는 도망칠 수 없습니다!");
 		return false;
 	}
