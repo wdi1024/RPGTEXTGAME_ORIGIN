@@ -16,8 +16,9 @@ public class HeroAttack {
 				break;
 			} else {
 				System.out.println(heroStatus.name + "의 공격입니다");
+				// 히어로 공격
 				Monster.monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
-				System.out.println(monsterName + "의 공격입니다");
+				// monster 공격
 				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				System.out.println("=====================================");
 				break;
@@ -109,11 +110,11 @@ public class HeroAttack {
 		while (true) {// 적이 난수에 따라 용병이나 플레이어 공격하도록 변경, 플레이어 공격시 hp 떨어진 용병 공격 못하게 할 필요있음
 			int target = r.nextInt(heroStatus.solNum.size());
 			if (target == heroStatus.solNum.size()) {
-				System.out.println(MonsterName + "이 " + heroStatus.name + "를 공격!");
+				System.out.println(Monster.monsName + "이 " + heroStatus.name + "를 공격!");
 				heroStatus.hp = heroStatus.hp - sum;
 				System.out.println(heroStatus.name + "의 데미지는 " + sum + "입니다");
 			} else if (heroStatus.solNum.get(target).solHp > 0) {
-				System.out.println(MonsterName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
+				System.out.println(Monster.monsName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
 				heroStatus.solNum.get(target).solHp -= sum;
 				System.out.println(heroStatus.solNum.get(target).solName + "의 데미지는 " + sum + "입니다");
 				if (heroStatus.solNum.get(target).solHp <= 0) {
