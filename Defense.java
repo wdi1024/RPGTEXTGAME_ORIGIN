@@ -4,7 +4,6 @@ public class Defense {// 아직 안 올림
 	static int selectMove;
 
 	static void StartDefense() {
-		int MonsterPower = 100;
 		Scanner in = new Scanner(System.in);
 		while (true) {
 			System.out.println("0.돌아가기");
