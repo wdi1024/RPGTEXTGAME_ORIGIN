@@ -40,7 +40,7 @@ public class Fight {
 				break;
 			}
 			if (heroStatus.hp <= 0) {
-				System.out.println("\n" + heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+				System.out.println(heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
 				heroStatus.hp = 1;
 				heroStatus.money *= heroStatus.money * 1 / 2;
 				System.out.println("!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");

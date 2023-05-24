@@ -14,9 +14,11 @@ public class SelectingDungeon {
 			System.out.println("0. 돌아가기\n1. 신비의 숲\n2. 빛 바랜 성\n3. (보스) 파괴의 사원");
 			System.out.print("던전 번호를 선택하세요 (0 선택 시 복귀) : ");
 			dungeonNum = in.nextInt();
+			System.out.println("====================================");
 
 			if (dungeonNum == 0) {
 				System.out.println("왔던 곳으로 돌아갑니다.");
+				System.out.println("====================================");
 				break;
 			}
 			if (dungeonNum == 1) {
