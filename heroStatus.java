@@ -28,11 +28,11 @@ public class heroStatus {
 			System.out.println("==============================================");
 			if (selection == 1) {
 				job = "전사";
-				hp = 50;
-				maxHp = 50;
+				hp = 100000;
+				maxHp = 100000;
 				mp = 20;
 				maxMp = 20;
-				power = 10;
+				power = 1;
 				magic = 2;
 			} else if (selection == 2) {
 				job = "궁수";

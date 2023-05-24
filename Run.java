@@ -26,7 +26,7 @@ public class Run {
 	}
 
 	static boolean canNotRun() {
-		System.out.print("보스에게서는 도망칠 수 없습니다!");
+		System.out.print("보스에게서는 도망칠 수 없습니다!\n");
 		return false;
 	}
 
