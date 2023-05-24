@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import src.Monster;
-
 public class ItemAtFight {
 	static int selectItem;
 	static Scanner in = new Scanner(System.in);
@@ -21,7 +19,7 @@ public class ItemAtFight {
 					HeroSkill.skillList.add(MyInventory.skillbook.get(selectItem - 7));// 임시
 					System.out.println("스킬 " + MyInventory.skillbook.get(selectItem - 7) + "를 획득했습니다.");
 					MyInventory.outItem(selectItem);
-					heroAttacked(Monster.monsterAttack(Monster.monsPower));
+					HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 					break;
 				} else if (selectItem == 1) {
 					if (MyInventory.hpPotionCnt > 0) {
@@ -31,7 +29,7 @@ public class ItemAtFight {
 							heroStatus.hp = heroStatus.maxHp;
 						}
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("체력 회복포션 수가 부족합니다");
@@ -45,7 +43,7 @@ public class ItemAtFight {
 							heroStatus.mp = heroStatus.maxMp;
 						}
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("마나 회복포션 수가 부족합니다");
@@ -55,7 +53,7 @@ public class ItemAtFight {
 						System.out.println("최대체력이 10증강 되었습니다");
 						heroStatus.maxHp += 10;
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("최대체력 증강포션 수가 부족합니다");
@@ -65,7 +63,7 @@ public class ItemAtFight {
 						System.out.println("최대마나가 10증강 되었습니다");
 						heroStatus.maxMp += 10;
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("최대마나 증강포션 수가 부족합니다");
@@ -75,7 +73,7 @@ public class ItemAtFight {
 						System.out.println("힘이 5증강 되었습니다");
 						heroStatus.power += 5;
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("힘 증강포션 수가 부족합니다");
@@ -85,7 +83,7 @@ public class ItemAtFight {
 						System.out.println("마력이 5증강 되었습니다");
 						heroStatus.magic += 5;
 						MyInventory.outItem(selectItem);
-						heroAttacked(Monster.monsterAttack(Monster.monsPower));
+						HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
 						break;
 					} else {
 						System.out.println("마력 증강포션 수가 부족합니다");

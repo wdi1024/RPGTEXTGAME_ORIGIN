@@ -44,7 +44,7 @@ public class HeroAttack {
 					System.out.println("4.전사 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
-				attackSelet = in.nextInt();
+				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
 					System.out.println("쓰러스트 공격!");
