@@ -15,12 +15,8 @@ public class ItemAtHome {
 			System.out.println("=====================================");
 			if (selectItem == 0)
 				break;
-			else if (selectItem <= (6 + MyInventory.skillbook.size())) {
-				if (selectItem > 6) {
-					HeroSkill.skillList.add(MyInventory.skillbook.get(selectItem - 7));// 임시
-					System.out.println("스킬 " + MyInventory.skillbook.get(selectItem - 7) + "를 획득했습니다.");
-					MyInventory.outItem(selectItem);
-				} else if (selectItem == 1) {
+			else if (selectItem <= 6) {
+				if (selectItem == 1) {
 					if (MyInventory.hpPotionCnt > 0) {
 						System.out.println("체력이 50회복 되었습니다");
 						heroStatus.hp += 50;
@@ -80,5 +76,4 @@ public class ItemAtHome {
 				System.out.println("목록 내의 번호를 입력해주세요.");
 		}
 	}
-
 }
