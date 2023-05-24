@@ -15,7 +15,7 @@ public class Fight {
 			System.out.println("4. 후퇴");
 			System.out.printf("어떻게 하시겠습니까?");
 			int selection = in.nextInt();
-			System.out.println("=====================================");
+			System.out.println("====================================");
 			if (selection == 1) {
 				HeroAttack.StartHeroAttack();
 				heroStatus.printStatus();
