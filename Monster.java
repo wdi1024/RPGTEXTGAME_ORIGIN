@@ -78,11 +78,11 @@ public class Monster {
 
 	static void monsterAttacked(int sum) {
 		if (monsDefense >= sum) {
-			System.out.println(monsName + "의 데미지는 0입니다");
+			System.out.println(monsName + "가 받은 데미지는 0입니다");
 			monsHp = monsHp - 0;
 		} else {
 			monsHp = monsHp + monsDefense - sum;
-			System.out.println(monsName + "의 데미지는 " + sum + "입니다");
+			System.out.println(monsName + "가 받은 데미지는 " + sum + "입니다");
 		}
 	}
 }

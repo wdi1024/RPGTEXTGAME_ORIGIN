@@ -310,13 +310,13 @@ public class HeroAttack {
 			if (target == heroStatus.solNum.size()) {
 				System.out.println(Monster.monsName + "이(가) " + heroStatus.name + "를 공격!");
 				heroStatus.hp = heroStatus.hp - sum;
-				System.out.println(heroStatus.name + "의 데미지는 " + sum + "입니다");
+				System.out.println(heroStatus.name + "이(가) 받은 데미지는 " + sum + "입니다");
 				System.out.println("=====================================");
 				break;
 			} else if (heroStatus.solNum.get(target).solHp > 0) {
 				System.out.println(Monster.monsName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
 				heroStatus.solNum.get(target).solHp -= sum;
-				System.out.println(heroStatus.solNum.get(target).solName + "의 데미지는 " + sum + "입니다");
+				System.out.println(heroStatus.solNum.get(target).solName + "이(가) 받은 데미지는 " + sum + "입니다");
 				if (heroStatus.solNum.get(target).solHp <= 0) {
 					System.out.println(heroStatus.solNum.get(target).solName + "이 쓰러졌습니다!");
 				}
