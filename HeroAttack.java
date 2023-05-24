@@ -20,7 +20,7 @@ public class HeroAttack {
 				Monster.monsterAttacked(heroAttack());
 				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다");
-					Monster.monsterAttacked(SolSkill.solskill(heroStatus.solNum.get(i).solNum));
+					Monster.monsterAttacked(SolSkill.solskill(i));
 				}
 				if (Monster.monsHp <= 0)
 					break;
