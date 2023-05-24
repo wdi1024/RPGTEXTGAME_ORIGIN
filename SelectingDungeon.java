@@ -118,10 +118,13 @@ public class SelectingDungeon {
 				System.out.println("보스 던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
+				if (Monster.monsHp > 0)
+					continue;
 
 				monster = new Dragon();
 				Fight.selectAttack();
-
+				if (Monster.monsHp > 0)
+					continue;
 				monster = new Dragon();
 
 				Fight.selectAttack();

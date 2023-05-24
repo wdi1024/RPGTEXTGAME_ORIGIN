@@ -17,7 +17,9 @@ public class HeroAttack {
 			} else {
 				System.out.println(heroStatus.name + "의 공격입니다");
 				// 히어로 공격
-				Monster.monsterAttacked(heroAttack(heroStatus.level, heroStatus.power));
+				Monster.monsterAttacked(heroAttack());
+				if (Monster.monsHp <= 0)
+					break;
 				// monster 공격
 				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				System.out.println("=====================================");
@@ -28,7 +30,7 @@ public class HeroAttack {
 	}
 
 	// 히어로 공격에서 solskill, heroskill 과 연계 필요
-	static int heroAttack(int hero_level, int hero_power) {
+	static int heroAttack() {
 		Scanner in = new Scanner(System.in);
 		int sum = 0;
 		while (true) {
@@ -55,7 +57,7 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 2) {
 							System.out.println("전사 스킬 2 공격!");
-							sum = heroStatus.power * 30 + heroStatus.level * 15 + heroStatus.magic * 5;
+							sum = heroStatus.power * 30 + heroStatus.level * 15 + heroStatus.magic * 10;
 							heroStatus.mp -= 2;
 							break;
 						} else {
@@ -69,7 +71,7 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 4) {
 							System.out.println("전사 스킬 3 공격!");
-							sum = heroStatus.power * 40 + heroStatus.level * 20 + heroStatus.magic * 5;
+							sum = heroStatus.power * 40 + heroStatus.level * 20 + heroStatus.magic * 15;
 							heroStatus.mp -= 4;
 							break;
 						} else {
@@ -83,7 +85,7 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("전사 스킬 4 공격!");
-							sum = heroStatus.power * 60 + heroStatus.level * 30 + heroStatus.magic * 5;
+							sum = heroStatus.power * 60 + heroStatus.level * 30 + heroStatus.magic * 25;
 							heroStatus.mp -= 10;
 							break;
 						} else {
@@ -119,7 +121,7 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 2) {
 							System.out.println("궁수 스킬 2 공격!");
-							sum = heroStatus.power * 30 + heroStatus.level * 15 + heroStatus.magic * 10;
+							sum = heroStatus.power * 20 + heroStatus.level * 15 + heroStatus.magic * 20;
 							heroStatus.mp -= 2;
 							break;
 						} else {
@@ -133,7 +135,7 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 4) {
 							System.out.println("궁수 스킬 3 공격!");
-							sum = heroStatus.power * 40 + heroStatus.level * 20 + heroStatus.magic * 10;
+							sum = heroStatus.power * 30 + heroStatus.level * 20 + heroStatus.magic * 25;
 							heroStatus.mp -= 4;
 							break;
 						} else {
@@ -147,7 +149,135 @@ public class HeroAttack {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("궁수 스킬 4 공격!");
-							sum = heroStatus.power * 60 + heroStatus.level * 30 + heroStatus.magic * 10;
+							sum = heroStatus.power * 45 + heroStatus.level * 30 + heroStatus.magic * 40;
+							heroStatus.mp -= 10;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else {
+					System.out.println("알맞은 번호를 입력해주세요");
+				}
+			} else if (heroStatus.selection == 3) {// 직업이 마법사일 경우
+				System.out.println("1. 매직클로");
+				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
+																					// 구분
+					System.out.println("2.마법사 2 스킬");
+				}
+				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
+					System.out.println("3.마법사 3 스킬");
+				}
+				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
+					System.out.println("4.마법사 4 스킬");
+				}
+				System.out.println("사용할 스킬을 선택해주세요 :");
+				attackSelect = in.nextInt();
+				System.out.println("=====================================");
+				if (attackSelect == 1) {
+					System.out.println("매직클로 공격!");
+					sum = heroStatus.power * 5 + heroStatus.level * 10 + heroStatus.magic * 20;
+					break;
+				} else if (attackSelect == 2) {
+					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 2) {
+							System.out.println("마법사 스킬 2 공격!");
+							sum = heroStatus.power * 10 + heroStatus.level * 15 + heroStatus.magic * 30;
+							heroStatus.mp -= 2;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else if (attackSelect == 3) {
+					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 4) {
+							System.out.println("마법사 스킬 3 공격!");
+							sum = heroStatus.power * 15 + heroStatus.level * 20 + heroStatus.magic * 40;
+							heroStatus.mp -= 4;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else if (attackSelect == 4) {
+					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 10) {
+							System.out.println("마법사 스킬 4 공격!");
+							sum = heroStatus.power * 25 + heroStatus.level * 30 + heroStatus.magic * 60;
+							heroStatus.mp -= 10;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else {
+					System.out.println("알맞은 번호를 입력해주세요");
+				}
+			} else if (heroStatus.selection == 4) {// 직업이 도일 경우
+				System.out.println("1. 표창던지기");
+				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
+																					// 구분
+					System.out.println("2.도적 2 스킬");
+				}
+				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
+					System.out.println("3.도적 3 스킬");
+				}
+				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
+					System.out.println("4.도적 4 스킬");
+				}
+				System.out.println("사용할 스킬을 선택해주세요 :");
+				attackSelect = in.nextInt();
+				System.out.println("=====================================");
+				if (attackSelect == 1) {
+					System.out.println("표창던지기 공격!");
+					sum = heroStatus.power * 10 + heroStatus.level * 10 + heroStatus.magic * 15;
+					break;
+				} else if (attackSelect == 2) {
+					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 2) {
+							System.out.println("도적 스킬 2 공격!");
+							sum = heroStatus.power * 20 + heroStatus.level * 15 + heroStatus.magic * 20;
+							heroStatus.mp -= 2;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else if (attackSelect == 3) {
+					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 4) {
+							System.out.println("도적 스킬 3 공격!");
+							sum = heroStatus.power * 25 + heroStatus.level * 20 + heroStatus.magic * 30;
+							heroStatus.mp -= 4;
+							break;
+						} else {
+							System.out.println("마나가 부족해 공격에 실패했습니다!");
+						}
+					} else {
+						System.out.println("그 스킬은 배우지 않았습니다");
+					}
+
+				} else if (attackSelect == 4) {
+					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
+						if (heroStatus.mp >= 10) {
+							System.out.println("도적 스킬 4 공격!");
+							sum = heroStatus.power * 40 + heroStatus.level * 30 + heroStatus.magic * 45;
 							heroStatus.mp -= 10;
 							break;
 						} else {
@@ -161,8 +291,8 @@ public class HeroAttack {
 					System.out.println("알맞은 번호를 입력해주세요");
 				}
 			}
-			return sum;
 		}
+		return sum;
 	}
 
 	// 히어로 어택드에서 solclass와 연계필요

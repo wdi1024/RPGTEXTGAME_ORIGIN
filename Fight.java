@@ -41,7 +41,8 @@ public class Fight {
 				heroStatus.money *= heroStatus.money * 1 / 2;
 				System.out.println("!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");
 				System.out.println("돈의 50%가 삭감됐습니다.");
-				System.out.println("Home으로 되돌아왔습니다.");
+				System.out.println("던전 선택화면으로 되돌아왔습니다.");
+				System.out.println("=====================================");
 				break;
 			}
 		}
