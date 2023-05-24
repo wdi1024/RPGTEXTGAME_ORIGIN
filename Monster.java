@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Monster {
@@ -34,39 +33,39 @@ public class Monster {
 //	}
 //}
 
-    public Monster(String name, int hp, int power, int defense, int money, int exp) {
-        this.monsName = name;
-        this.monsHp = hp;
-        this.monsPower = power;
-        this.monsDefense = defense; 
-        this.monsMoney = money;
-        this.monsExp = exp;
-    }
+	public Monster(String name, int hp, int power, int defense, int money, int exp) {
+		Monster.monsName = name;
+		Monster.monsHp = hp;
+		Monster.monsPower = power;
+		Monster.monsDefense = defense;
+		Monster.monsMoney = money;
+		Monster.monsExp = exp;
+	}
 
-    public String getName() {
-        return monsName;
-    }
+	public String getName() {
+		return monsName;
+	}
 
-    public int getHp() {
-        return monsHp;
-    }
+	public int getHp() {
+		return monsHp;
+	}
 
-    public int getPower() {
-        return monsPower;
-    }
+	public int getPower() {
+		return monsPower;
+	}
 
-    public int getDefense() {
-        return monsDefense;
-    }
-    
-    public int getMoney() {
-        return monsMoney;
-    }
-    
-    public int getExp() {
-        return monsExp;
-    }
-    
+	public int getDefense() {
+		return monsDefense;
+	}
+
+	public int getMoney() {
+		return monsMoney;
+	}
+
+	public int getExp() {
+		return monsExp;
+	}
+
 	static int monsterAttack(int monster_power) {
 		int sum = 0;
 		if (monster_power < 0) {
@@ -76,33 +75,32 @@ public class Monster {
 		System.out.println(monsName + "의 공격입니다!");
 		return sum;
 	}
-	
+
 	static void monsterAttacked(int sum) {
 		if (monsDefense >= sum) {
 			System.out.println(monsName + "의 데미지는 0입니다");
 			monsHp = monsHp - 0;
 		} else {
-			monsHp = monsHp + monsDefense  - sum;
+			monsHp = monsHp + monsDefense - sum;
 			System.out.println(monsName + "의 데미지는 " + sum + "입니다");
 		}
 	}
 }
 
 class Cat extends Monster {
-    public Cat() {
-        super("고양이", 50, 20, 10, 10, 10);
-    }
+	public Cat() {
+		super("고양이", 50, 20, 10, 10, 10);
+	}
 }
 
 class Goblin extends Monster {
-    public Goblin() {
-    	super("살쾡이", 100, 30, 10, 10, 10);
-    }
+	public Goblin() {
+		super("살쾡이", 100, 30, 10, 10, 10);
+	}
 }
 
 class Dragon extends Monster {
-    public Dragon() {
-    	super("철갑드래곤", 1000, 30, 10, 10, 10);
-    }
+	public Dragon() {
+		super("철갑드래곤", 1000, 30, 10, 10, 10);
+	}
 }
-

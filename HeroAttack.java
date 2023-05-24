@@ -9,9 +9,9 @@ public class HeroAttack {
 		while (true) {
 			System.out.println("0.돌아가기");
 			System.out.println("1.공격");
-			System.out.println("공격하시겠습니까? :");
-			System.out.println("=====================================");
+			System.out.printf("공격하시겠습니까? :");
 			selectMove = in.nextInt();
+			System.out.println("=====================================");
 			if (selectMove == 0) {
 				break;
 			} else {

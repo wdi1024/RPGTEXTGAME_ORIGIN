@@ -1,14 +1,14 @@
 public class solClass {
-	static String solName;
-	static int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;
+	String solName;
+	int solNum, solHp, solMaxHp, solMp, solMaxMp, solPower, solMagic;
 
 // 나는 바보다, 진짜
-	static void printSolStatus() {
-		System.out.println("이름 : " + solName);
-		System.out.println("체력 : " + solHp + " 최대체력 : " + solMaxHp);
-		System.out.println("체력 : " + solMp + " 최대체력 : " + solMaxMp);
-		System.out.println("힘 : " + solPower);
-		System.out.println("마력 : " + solMagic);
+	static void printSolStatus(solClass K) {
+		System.out.println("이름 : " + K.solName);
+		System.out.println("체력 : " + K.solHp + " 최대체력 : " + K.solMaxHp);
+		System.out.println("체력 : " + K.solMp + " 최대체력 : " + K.solMaxMp);
+		System.out.println("힘 : " + K.solPower);
+		System.out.println("마력 : " + K.solMagic);
 
 	}
 

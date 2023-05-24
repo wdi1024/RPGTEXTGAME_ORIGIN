@@ -16,7 +16,7 @@ public class Run {
 		int answer = in.nextInt();
 		System.out.println("=====================================");
 		if (answer == 1) {
-			System.out.printf("\n헐레벌떡 도망치느라 hp가 1이 되었고 돈을 %d원 잃어버려습니다.", heroStatus.money * 25 / 100);
+			System.out.printf("헐레벌떡 도망치느라 hp가 1이 되었고 돈을 %d원 잃어버렸습니다.\n", heroStatus.money * 25 / 100);
 			heroStatus.hp = 1;
 			heroStatus.money = heroStatus.money * 75 / 100;
 			return true;// 홈으로 돌아감

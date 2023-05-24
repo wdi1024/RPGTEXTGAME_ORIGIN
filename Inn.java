@@ -30,6 +30,8 @@ public class Inn {
 				heroStatus.solNum.get(i).solHp = heroStatus.solNum.get(i).solMaxHp;
 				System.out.println(heroStatus.solNum.get(i).solName + "의 체력이 최대치로 회복되었습니다.");
 				System.out.println("=====================================");
+				solClass.printSolStatus(heroStatus.solNum.get(i));
+				System.out.println("=====================================");
 			} else {
 				System.out.println(heroStatus.solNum.get(i).solName + "의 체력이 최대치입니다.");
 				System.out.println("=====================================");

@@ -13,7 +13,7 @@ public class Home {
 		map = in.nextInt();
 		if (map == 1) {
 			System.out.println("=====================================");
-			// SelectingDungeon.StartSelectingDungeon();
+			SelectingDungeon.StartDungeon();
 		} else if (map == 2) {
 			System.out.println("=====================================");
 			Shop.StartShop();
