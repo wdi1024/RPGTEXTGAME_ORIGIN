@@ -50,7 +50,7 @@ public class Home {
 		while (boss_clear != 1)
 			selectMap();
 
-		System.out.println("보스를 물리쳐 게임을 클리어하셨습니다! 축하합니다!");
+		System.out.println("축하합니다! 보스를 처치하여 모험을 완료했습니다!\n수고하셨습니다!");
 	}
 
 }

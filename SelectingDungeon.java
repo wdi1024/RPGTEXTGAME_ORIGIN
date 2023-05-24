@@ -36,6 +36,30 @@ public class SelectingDungeon {
 				System.out.println("던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
+
+				if (Monster.monsHp > 0)
+					continue;
+
+				randomValue = random.nextDouble();
+				if (randomValue < catProbability) {
+					monster = new Cat();
+				} else {
+					monster = new Goblin();
+				}
+				// 전투 시작
+				Fight.selectAttack();
+
+				if (Monster.monsHp > 0)
+					continue;
+
+				randomValue = random.nextDouble();
+				if (randomValue < catProbability) {
+					monster = new Cat();
+				} else {
+					monster = new Goblin();
+				}
+				// 전투 시작
+				Fight.selectAttack();
 			}
 			if (dungeonNum == 2) {
 				System.out.println("----- 빛 바랜 성 -----.");
@@ -46,14 +70,40 @@ public class SelectingDungeon {
 				// 몬스터 등장 확률에 따라 몬스터 생성
 				double randomValue = random.nextDouble();
 				if (randomValue < catProbability) {
-					monster = new Cat();
-				} else {
 					monster = new Goblin();
+				} else {
+					monster = new Dragon();
 				}
 				System.out.println("던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
 
+				if (Monster.monsHp > 0)
+					continue;
+
+				randomValue = random.nextDouble();
+				if (randomValue < catProbability) {
+					monster = new Goblin();
+				} else {
+					monster = new Dragon();
+				}
+				// 전투 시작
+				Fight.selectAttack();
+
+				if (Monster.monsHp > 0)
+					continue;
+
+				randomValue = random.nextDouble();
+				if (randomValue < catProbability) {
+					monster = new Goblin();
+				} else {
+					monster = new Dragon();
+				}
+				// 전투 시작
+				Fight.selectAttack();
+
+				if (Monster.monsHp > 0)
+					continue;
 			}
 			if (dungeonNum == 3) {
 				System.out.println("----- (보스) 파괴의 사원 -----.");
@@ -62,32 +112,23 @@ public class SelectingDungeon {
 
 				double catProbability = 0.8; // 고양이 등장 확률 (80%)
 				double goblinProbability = 0.2; // 살쾡이 등장 확률 (20%)
-				// 몬스터 등장 확률에 따라 몬스터 생성
-				double randomValue = random.nextDouble();
 
-				if (randomValue < catProbability) {
-					monster = new Cat();
-				} else {
-					monster = new Goblin();
-				}
+				monster = new Dragon();
 
 				System.out.println("보스 던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
 
-				randomValue = random.nextDouble();
-
-				if (randomValue < catProbability) {
-					monster = new Cat();
-				} else {
-					monster = new Goblin();
-				}
-				
-				Fight.selectAttack();
-				
 				monster = new Dragon();
-				
 				Fight.selectAttack();
+
+				monster = new Dragon();
+
+				Fight.selectAttack();
+				if (Monster.monsHp == 0) {
+					Home.boss_clear = 1;
+					break;
+				}
 			}
 		}
 	}
