@@ -47,7 +47,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("3.전사 3 스킬");
 				}
-				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
+				if (HeroSkill.hasjeonsa4Skillbook()) {
 					System.out.println("4.전사 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
@@ -86,7 +86,7 @@ public class HeroAttack {
 					}
 
 				} else if (attackSelect == 4) {
-					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {
+					if (HeroSkill.hasjeonsa4Skillbook()) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("전사 스킬 4 공격!");
 							sum = heroStatus.power * 60 + heroStatus.level * 30 + heroStatus.magic * 25;
@@ -111,7 +111,7 @@ public class HeroAttack {
 				if (HeroSkill.hasgungsu3Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("3.궁수 3 스킬");
 				}
-				if (HeroSkill.hasgungsu4Skillbook(MyInventory.skillbook) == true) {
+				if (HeroSkill.hasgungsu4Skillbook()) {
 					System.out.println("4.궁수 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
@@ -150,7 +150,7 @@ public class HeroAttack {
 					}
 
 				} else if (attackSelect == 4) {
-					if (HeroSkill.hasgungsu4Skillbook(MyInventory.skillbook) == true) {
+					if (HeroSkill.hasgungsu4Skillbook()) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("궁수 스킬 4 공격!");
 							sum = heroStatus.power * 45 + heroStatus.level * 30 + heroStatus.magic * 40;
@@ -176,7 +176,7 @@ public class HeroAttack {
 				if (HeroSkill.hasmagician3Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("3.마법사 3 스킬");
 				}
-				if (HeroSkill.hasmagician4Skillbook(MyInventory.skillbook) == true) {
+				if (HeroSkill.hasmagician4Skillbook()) {
 					System.out.println("4.마법사 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
@@ -215,7 +215,7 @@ public class HeroAttack {
 					}
 
 				} else if (attackSelect == 4) {
-					if (HeroSkill.hasmagician4Skillbook(MyInventory.skillbook) == true) {
+					if (HeroSkill.hasmagician4Skillbook()) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("마법사 스킬 4 공격!");
 							sum = heroStatus.power * 25 + heroStatus.level * 30 + heroStatus.magic * 60;
@@ -240,7 +240,7 @@ public class HeroAttack {
 				if (HeroSkill.hasthief3Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("3.도적 3 스킬");
 				}
-				if (HeroSkill.hasthief4Skillbook(MyInventory.skillbook) == true) {
+				if (HeroSkill.hasthief4Skillbook()) {
 					System.out.println("4.도적 4 스킬");
 				}
 				System.out.println("사용할 스킬을 선택해주세요 :");
@@ -279,7 +279,7 @@ public class HeroAttack {
 					}
 
 				} else if (attackSelect == 4) {
-					if (HeroSkill.hasthief4Skillbook(MyInventory.skillbook) == true) {
+					if (HeroSkill.hasthief4Skillbook()) {
 						if (heroStatus.mp >= 10) {
 							System.out.println("도적 스킬 4 공격!");
 							sum = heroStatus.power * 40 + heroStatus.level * 30 + heroStatus.magic * 45;
