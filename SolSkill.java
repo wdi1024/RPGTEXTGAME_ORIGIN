@@ -29,7 +29,7 @@ public class SolSkill {
             }
 		}
         return sum;
-//        if (solClass.solNum == 1) {
+        if (solClass.solNum == 2) {
 //			System.out.println("리차드 어택");
 //			int RAPercent = 40; // 리차드 어택 확률 (40%)
 //            int RDPercent = 30; // 리차드 힐 확률 (30%)
