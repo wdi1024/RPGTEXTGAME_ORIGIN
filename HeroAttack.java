@@ -46,7 +46,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.전사 4 스킬");
 				}
-				System.out.println("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -110,7 +110,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.궁수 4 스킬");
 				}
-				System.out.println("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -174,7 +174,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.마법사 4 스킬");
 				}
-				System.out.println("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -238,7 +238,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.도적 4 스킬");
 				}
-				System.out.println("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
