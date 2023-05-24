@@ -8,6 +8,7 @@ public class Fight {
 		System.out.println("몬스터와 조우했습니다.");
 		while (true) {
 			// 행동 선택;
+			System.out.println("0. 전투상황");
 			System.out.println("1. 전투 개시");
 			System.out.println("2. 아이템 사용");
 			System.out.println("3. 방어");
@@ -15,15 +16,14 @@ public class Fight {
 			System.out.printf("어떻게 하시겠습니까?");
 			int selection = in.nextInt();
 			System.out.println("====================================");
-			if (selection == 1) {
-				HeroAttack.StartHeroAttack();
+			if (selection == 0) {
 				heroStatus.printStatus();
+			} else if (selection == 1) {
+				HeroAttack.StartHeroAttack();
 			} else if (selection == 2) {
 				ItemAtFight.StartItemAtFight();
-				heroStatus.printStatus();
 			} else if (selection == 3) {
 				Defense.StartDefense();
-				heroStatus.printStatus();
 			} else if (selection == 4) {
 				if (Run.checkRun() == true) {
 					break;
