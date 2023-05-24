@@ -118,8 +118,48 @@ public class Shop {
 					System.out.printf("판매할 물건 개수를 입력하세요. :");
 					productcnt = in.nextInt();
 					System.out.println("=====================================");
-					if (checkMind()) {
-						MyInventory.outItem(productnum, productcnt);
+					if (productnum == 1) {
+						System.out.printf("가격은 %d입니다.\n", 5 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum == 2) {
+						System.out.printf("가격은 %d입니다.\n", 5 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum == 3) {
+						System.out.printf("가격은 %d입니다.\n", 50 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum == 4) {
+						System.out.printf("가격은 %d입니다.\n", 50 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum == 5) {
+						System.out.printf("가격은 %d입니다.\n", 25 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum == 6) {
+						System.out.printf("가격은 %d입니다.\n", 25 * productcnt);
+						if (checkMind()) {
+							MyInventory.outItem(productnum, productcnt);
+							heroStatus.money += 5 * productcnt;
+						}
+					} else if (productnum > 6) {
+						System.out.printf("가격은 %d입니다.\n", 100);
+						if (checkMind()) {
+							MyInventory.outItem(productnum);
+							heroStatus.money += 100;
+						}
 					}
 				}
 			}
