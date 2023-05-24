@@ -4,7 +4,6 @@ public class Fight {
 
 	static void selectAttack() {
 		Scanner in = new Scanner(System.in);
-		heroStatus.printStatus();
 
 		System.out.println("몬스터와 조우했습니다.");
 		while (true) {

@@ -27,7 +27,7 @@ public class SoldierCamp {
 		System.out.println("대기중인 용병 목록");
 		System.out.println("-------------------------------------------");
 		for (int i = 0; i < waitingSoldier.size(); i++)
-			System.out.println(waitingSoldier.get(i).solName);
+			System.out.println(i + ". " + waitingSoldier.get(i).solName);
 		System.out.println("=====================================");
 	}
 
