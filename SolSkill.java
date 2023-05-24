@@ -1,11 +1,11 @@
 import java.util.Random;
 
 public class SolSkill {
-	
-	static int solskill() {
+
+	static int solskill(int solnum) {
         Random random = new Random();
 		int sum = 0;
-        if (solClass.solNum == 1) {
+        if (solnum == 1) {
 			System.out.println("리차드 어택");
 			int RAPercent = 40; // 리차드 어택 확률 (40%)
             int RDPercent = 30; // 리차드 힐 확률 (30%)

@@ -59,7 +59,7 @@ public class SoldierCamp {
 
 						if (heroStatus.money >= price) {
 							if (heroStatus.solNum.size() <= 5) {
-								System.out.println(unhiredSoldier.get(hs) + "을(를) 고용했습니다.");
+								System.out.println(unhiredSoldier.get(hs).solName + "을(를) 고용했습니다.");
 								heroStatus.solNum.add(unhiredSoldier.get(hs));
 								unhiredSoldier.remove(hs);
 								heroStatus.money -= price;

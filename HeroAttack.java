@@ -18,6 +18,10 @@ public class HeroAttack {
 				System.out.println(heroStatus.name + "의 공격입니다");
 				// 히어로 공격
 				Monster.monsterAttacked(heroAttack());
+				for (int i = 0; i < heroStatus.solNum.size(); i++) {
+					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다");
+					Monster.monsterAttacked(SolSkill.solskill(heroStatus.solNum.get(i).solNum));
+				}
 				if (Monster.monsHp <= 0)
 					break;
 				// monster 공격
@@ -46,7 +50,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.전사 4 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.println("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -110,7 +114,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.궁수 4 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.println("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -174,7 +178,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.마법사 4 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.println("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -238,7 +242,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook(MyInventory.skillbook) == true) {
 					System.out.println("4.도적 4 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.println("사용할 스킬을 선택해주세요 :");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
