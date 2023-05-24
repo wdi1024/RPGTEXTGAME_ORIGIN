@@ -14,14 +14,8 @@ public class ItemAtFight {
 			selectItem = in.nextInt();
 			if (selectItem == 0)
 				break;
-			else if (selectItem <= (6 + MyInventory.skillbook.size())) {// 아이템 사용시 몬스터 공격 추가
-				if (selectItem > 6) {
-					HeroSkill.skillList.add(MyInventory.skillbook.get(selectItem - 7));// 임시
-					System.out.println("스킬 " + MyInventory.skillbook.get(selectItem - 7) + "를 획득했습니다.");
-					MyInventory.outItem(selectItem);
-					HeroAttack.heroAttacked(Monster.monsterAttack(Monster.monsPower));
-					break;
-				} else if (selectItem == 1) {
+			else if (selectItem <= 6) {// 아이템 사용시 몬스터 공격 추가
+				if (selectItem == 1) {
 					if (MyInventory.hpPotionCnt > 0) {
 						System.out.println("체력이 50회복 되었습니다");
 						heroStatus.hp += 50;
