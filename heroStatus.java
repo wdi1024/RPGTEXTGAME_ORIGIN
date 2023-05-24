@@ -63,6 +63,29 @@ public class heroStatus {
 		}
 	}
 
+	static void checkLeveup() {
+		if (heroStatus.exp >= heroStatus.level * 100) {
+			heroStatus.exp -= heroStatus.level * 100;
+			heroStatus.level++;
+		}
+		if (heroStatus.level == 40) {
+			if (selection == 1) {
+				heroStatus.job = "기사";
+				System.out.println("적정 레벨에 도달하여 '기사'로 전직했습니다. 축하합니다!");
+			} else if (selection == 2) {
+				heroStatus.job = "정예궁수";
+				System.out.println("적정 레벨에 도달하여 '정예궁수'로 전직했습니다. 축하합니다!");
+			} else if (selection == 3) {
+				heroStatus.job = "현자";
+				System.out.println("적정 레벨에 도달하여 '현자'로 전직했습니다. 축하합니다!");
+			} else if (selection == 4) {
+				heroStatus.job = "섀도어";
+				System.out.println("적정 레벨에 도달하여 '섀도어'로 전직했습니다. 축하합니다!");
+			}
+			System.out.println("이제부터 새로운 스킬을 사용할 수 있습니다.");
+		}
+	}
+
 	static void printStatus() {
 		System.out.println("이름 : " + name);
 		System.out.println("직업 : " + job);
