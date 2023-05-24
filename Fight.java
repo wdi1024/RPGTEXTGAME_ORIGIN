@@ -15,19 +15,23 @@ public class Fight {
 			System.out.println("4. 후퇴");
 			System.out.printf("어떻게 하시겠습니까?");
 			int selection = in.nextInt();
-			System.out.println("=====================================");
+			System.out.println("====================================");
 			if (selection == 1) {
 				HeroAttack.StartHeroAttack();
+				heroStatus.printStatus();
 			} else if (selection == 2) {
 				ItemAtFight.StartItemAtFight();
+				heroStatus.printStatus();
 			} else if (selection == 3) {
 				Defense.StartDefense();
+				heroStatus.printStatus();
 			} else if (selection == 4) {
 				if (Run.checkRun() == true) {
 					break;
 				}
 			} else {
 				System.out.println("리스트에서 선택해주세요.");
+				System.out.println("=====================================");
 			}
 			if (Monster.monsHp <= 0) {
 				System.out.println("\n" + Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
