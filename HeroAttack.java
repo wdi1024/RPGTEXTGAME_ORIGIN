@@ -18,12 +18,14 @@ public class HeroAttack {
 				System.out.println(heroStatus.name + "의 공격입니다");
 				// 히어로 공격
 				Monster.monsterAttacked(heroAttack());
+				if (Monster.monsHp <= 0)
+					break;
 				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다");
 					Monster.monsterAttacked(SolSkill.solskill(i));
+					if (Monster.monsHp <= 0)
+						break;
 				}
-				if (Monster.monsHp <= 0)
-					break;
 				// monster 공격
 				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				break;
