@@ -165,5 +165,73 @@ public class AfterFight {
 	            System.out.println("파워포션드랍");
 	        }
 		}
+		// 보스 1
+		if (Monster.monsName == "철갑 드래곤") {
+	        Random random = new Random();
+	        int randomNumber = random.nextInt(100);
+	        int randomhp = random.nextInt(10) + 6;				// 6 to 15
+	        int randompw = random.nextInt(5) + 2;				// 2 to 6
+	        
+	        int cnt = 0;
+	        for (int i = 5; i < randomhp; i++) {
+	        	MyInventory.hpPotionCnt++;
+	        	cnt++;
+	        }
+	        System.out.printf("체력 회복 포션 드랍 (%d개)", cnt);
+	        
+	        cnt = 0;
+	        for (int i = 5; i < randomhp; i++) {
+	        	MyInventory. mpPotionCnt++;
+	        	cnt++;
+	        }
+	        System.out.printf("마나 회복 포션 드랍 (%d개)", cnt);
+	        
+	        cnt = 0;
+	        for (int i = 0; i < randompw; i++) {
+	        	MyInventory.powerPotionCnt++;
+	        	cnt++;
+	        }
+	        System.out.printf("힘 증강 포션 드랍 (%d개)", cnt);
+	        
+	        if (randomNumber < 50) {
+	            MyInventory.maxHpPotionCnt++;
+	            MyInventory.maxHpPotionCnt++;
+	            System.out.println("최대 체력 증강 포션 드랍");
+	        }
+	        
+	        if (randomNumber < 50) {
+	            MyInventory.maxMpPotionCnt++;
+	            MyInventory.maxMpPotionCnt++;
+	            System.out.println("최대 마나 증강 포션 드랍");
+	        }
+		}
+		// 보스 2
+		if (Monster.monsName == "불멸의 악마왕") {
+	        Random random = new Random();
+	        int randomNumber = random.nextInt(100); 					
+	        
+	        if (randomNumber >= 70 && randomNumber < 90) {
+	            MyInventory.hpPotionCnt++; 								
+	            System.out.println("체력포션드랍");
+	        } 
+	        else if (randomNumber >= 90) {
+	            MyInventory.powerPotionCnt++; 							
+	            System.out.println("파워포션드랍");
+	        }
+		}
+		// 	보스 3
+		if (Monster.monsName == "죽음의 그림자 군주") {
+	        Random random = new Random();
+	        int randomNumber = random.nextInt(100); 					
+	        
+	        if (randomNumber >= 70 && randomNumber < 90) {
+	            MyInventory.hpPotionCnt++; 								
+	            System.out.println("체력포션드랍");
+	        } 
+	        else if (randomNumber >= 90) {
+	            MyInventory.powerPotionCnt++; 							
+	            System.out.println("파워포션드랍");
+	        }
+		}		
 	}
 }
