@@ -55,9 +55,11 @@ public class Fight {
 					break;
 				}
 			}
-		} else if (SelectingDungeon.isItBossDungeon == true) {
+		} 
+		
+		else if (SelectingDungeon.isItBossDungeon == true) {
 			int cnt = 0;
-			System.out.println("몬스터와 조우했습니다.");
+			System.out.println("보스 몬스터와 조우했습니다.");
 			while (true) {
 				if (cnt == 20) {
 					System.out.println("HP = " + Monster.monsHp);
@@ -66,7 +68,7 @@ public class Fight {
 					Monster.monsHp *= 2;
 					Monster.monsPower *= 2;
 					Monster.monsDefense *= 2;
-					System.out.println("20턴이 지나 보스의 인내심이 한계에 달해 광폭화됩니다.(모든 스탯 2배)");
+					System.out.println("20턴이 지나 보스의 인내심이 한계에 달해 광폭화됩니다. (모든 스탯 2배)");
 					System.out.println("HP = " + Monster.monsHp);
 					System.out.println("Power = " + Monster.monsPower);
 					System.out.println("HP = " + Monster.monsDefense);
