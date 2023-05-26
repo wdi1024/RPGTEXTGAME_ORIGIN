@@ -5,7 +5,7 @@ public class Fight {
 	static void selectAttack() {
 		Scanner in = new Scanner(System.in);
 		if (SelectingDungeon.isItBossDungeon == false) {
-			System.out.println("몬스터와 조우했습니다");
+			System.out.println("몬스터와 조우했습니다.");
 			while (true) {
 				// 행동 선택;
 				System.out.println("0. 전투상황");
@@ -120,6 +120,3 @@ public class Fight {
 		}
 	}
 }
-
-// 전투시 선택지 부여
-// run 선택시에 while문 빠져나갈 수 있도록
