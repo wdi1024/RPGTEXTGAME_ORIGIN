@@ -101,6 +101,7 @@ public class Fight {
 				}
 				if (Monster.monsHp <= 0) {
 					System.out.println(Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+					System.out.println("=====================================");
 					heroStatus.exp += Monster.monsExp;
 					heroStatus.money += Monster.monsMoney;
 					AfterFight.Drop();
