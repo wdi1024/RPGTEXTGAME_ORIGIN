@@ -38,6 +38,7 @@ public class SelectingDungeon {
 				System.out.println("던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 
 				if (Monster.monsHp > 0)
 					continue;
@@ -50,6 +51,7 @@ public class SelectingDungeon {
 				}
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 
 				if (Monster.monsHp > 0)
 					continue;
@@ -62,6 +64,7 @@ public class SelectingDungeon {
 				}
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 			}
 			if (dungeonNum == 2) {
 				System.out.println("----- 빛 바랜 성 -----.");
@@ -79,6 +82,7 @@ public class SelectingDungeon {
 				System.out.println("던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 
 				if (Monster.monsHp > 0)
 					continue;
@@ -91,6 +95,7 @@ public class SelectingDungeon {
 				}
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 
 				if (Monster.monsHp > 0)
 					continue;
@@ -103,7 +108,7 @@ public class SelectingDungeon {
 				}
 				// 전투 시작
 				Fight.selectAttack();
-
+				heroStatus.checkLevelup();
 				if (Monster.monsHp > 0)
 					continue;
 			}
@@ -120,16 +125,19 @@ public class SelectingDungeon {
 				System.out.println("보스 던전에 입장했습니다. ");
 				// 전투 시작
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 				if (Monster.monsHp > 0)
 					continue;
 
 				monster = new Dragon();
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 				if (Monster.monsHp > 0)
 					continue;
 				monster = new Dragon();
 
 				Fight.selectAttack();
+				heroStatus.checkLevelup();
 				if (Monster.monsHp == 0) {
 					Home.boss_clear = 1;
 					break;

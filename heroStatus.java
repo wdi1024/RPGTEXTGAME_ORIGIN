@@ -28,32 +28,32 @@ public class heroStatus {
 			System.out.println("==============================================");
 			if (selection == 1) {
 				job = "전사";
-				hp = 100000;
-				maxHp = 100000;
+				hp = 100;
+				maxHp = 100;
 				mp = 20;
 				maxMp = 20;
-				power = 1;
+				power = 10;
 				magic = 2;
 			} else if (selection == 2) {
 				job = "궁수";
-				hp = 40;
-				maxHp = 40;
+				hp = 80;
+				maxHp = 80;
 				mp = 25;
 				maxMp = 25;
 				power = 7;
 				magic = 5;
 			} else if (selection == 3) {
 				job = "마법사";
-				hp = 30;
-				maxHp = 30;
+				hp = 60;
+				maxHp = 60;
 				mp = 50;
 				maxMp = 50;
 				power = 2;
 				magic = 10;
 			} else if (selection == 4) {
 				job = "도적";
-				hp = 40;
-				maxHp = 40;
+				hp = 80;
+				maxHp = 80;
 				mp = 25;
 				maxMp = 25;
 				power = 7;
@@ -63,10 +63,38 @@ public class heroStatus {
 		}
 	}
 
-	static void checkLeveup() {
+	static void checkLevelup() {
 		if (heroStatus.exp >= heroStatus.level * 100) {
 			heroStatus.exp -= heroStatus.level * 100;
 			heroStatus.level++;
+			if (selection == 1) {
+				heroStatus.hp += 30;
+				heroStatus.maxHp += 30;
+				heroStatus.power += 5;
+				heroStatus.mp += 2;
+				heroStatus.maxMp += 2;
+			} else if (selection == 2) {
+				heroStatus.hp += 30;
+				heroStatus.maxHp += 30;
+				heroStatus.power += 3;
+				heroStatus.magic += 2;
+				heroStatus.mp += 2;
+				heroStatus.maxMp += 2;
+			} else if (selection == 3) {
+				heroStatus.hp += 30;
+				heroStatus.maxHp += 30;
+				heroStatus.magic += 5;
+				heroStatus.mp += 2;
+				heroStatus.maxMp += 2;
+			} else if (selection == 4) {
+				heroStatus.hp += 30;
+				heroStatus.maxHp += 30;
+				heroStatus.power += 2;
+				heroStatus.magic += 3;
+				heroStatus.mp += 2;
+				heroStatus.maxMp += 2;
+			}
+			heroStatus.printStatus();
 		}
 		if (heroStatus.level == 40) {
 			if (selection == 1) {
