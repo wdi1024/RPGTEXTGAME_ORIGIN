@@ -7,21 +7,21 @@ public class HeroAttack {
 	static void StartHeroAttack() {
 		Scanner in = new Scanner(System.in);
 		while (true) {
-			System.out.println("0.돌아가기");
-			System.out.println("1.공격");
-			System.out.printf("공격하시겠습니까? :");
+			System.out.println("0. 돌아가기");
+			System.out.println("1. 공격");
+			System.out.printf("공격하시겠습니까? : ");
 			selectMove = in.nextInt();
 			System.out.println("=====================================");
 			if (selectMove == 0) {
 				break;
 			} else {
-				System.out.println(heroStatus.name + "의 공격입니다");
+				System.out.println(heroStatus.name + "의 공격입니다.");
 				// 히어로 공격
 				Monster.monsterAttacked(heroAttack());
 				if (Monster.monsHp <= 0)
 					break;
 				for (int i = 0; i < heroStatus.solNum.size(); i++) {
-					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다");
+					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다.");
 					Monster.monsterAttacked(SolSkill.solskill(i));
 					if (Monster.monsHp <= 0)
 						break;
@@ -41,8 +41,7 @@ public class HeroAttack {
 		while (true) {
 			if (heroStatus.selection == 1) {// 직업이 전사일 경우
 				System.out.println("1. 쓰러스트");
-				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
-																					// 구분
+				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {		// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로 구분																	
 					System.out.println("2. 파워 슬래시");
 				}
 				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
@@ -51,7 +50,7 @@ public class HeroAttack {
 				if (HeroSkill.hasjeonsa4Skillbook()) {
 					System.out.println("4. 신검합일");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -69,7 +68,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 3) {
@@ -83,7 +82,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 4) {
@@ -97,11 +96,11 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else {
-					System.out.println("알맞은 번호를 입력해주세요");
+					System.out.println("알맞은 번호를 입력해주세요.");
 				}
 			} else if (heroStatus.selection == 2) {// 직업이 궁수일 경우
 				System.out.println("1. 과녁맞히기");
@@ -115,7 +114,7 @@ public class HeroAttack {
 				if (HeroSkill.hasgungsu4Skillbook()) {
 					System.out.println("4. 폭풍의 시");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -133,7 +132,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 3) {
@@ -147,7 +146,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 4) {
@@ -161,17 +160,15 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else {
-					System.out.println("알맞은 번호를 입력해주세요");
+					System.out.println("알맞은 번호를 입력해주세요.");
 				}
 			} else if (heroStatus.selection == 3) {// 직업이 마법사일 경우
 				System.out.println("1. 매직클로");
-				if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true
-																						// false로
-																						// 구분
+				if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true / false로 구분
 					System.out.println("2. 기원참 스킬");
 				}
 				if (HeroSkill.hasmagician3Skillbook(MyInventory.skillbook) == true) {
@@ -180,7 +177,7 @@ public class HeroAttack {
 				if (HeroSkill.hasmagician4Skillbook()) {
 					System.out.println("4. 엘레멘탈 버스트 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -198,7 +195,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 3) {
@@ -212,7 +209,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 4) {
@@ -226,16 +223,15 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else {
-					System.out.println("알맞은 번호를 입력해주세요");
+					System.out.println("알맞은 번호를 입력해주세요.");
 				}
-			} else if (heroStatus.selection == 4) {// 직업이 도일 경우
+			} else if (heroStatus.selection == 4) {			// 직업이 도적일 경우
 				System.out.println("1. 표창던지기");
-				if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
-																					// 구분
+				if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로 구분													
 					System.out.println("2. 새비지 블로우");
 				}
 				if (HeroSkill.hasthief3Skillbook(MyInventory.skillbook) == true) {
@@ -244,7 +240,7 @@ public class HeroAttack {
 				if (HeroSkill.hasthief4Skillbook()) {
 					System.out.println("4. 사우전드 나이프 스킬");
 				}
-				System.out.printf("사용할 스킬을 선택해주세요 :");
+				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
 				System.out.println("=====================================");
 				if (attackSelect == 1) {
@@ -262,7 +258,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 3) {
@@ -276,7 +272,7 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else if (attackSelect == 4) {
@@ -290,11 +286,11 @@ public class HeroAttack {
 							System.out.println("마나가 부족해 공격에 실패했습니다!");
 						}
 					} else {
-						System.out.println("그 스킬은 배우지 않았습니다");
+						System.out.println("그 스킬은 배우지 않았습니다.");
 					}
 
 				} else {
-					System.out.println("알맞은 번호를 입력해주세요");
+					System.out.println("알맞은 번호를 입력해주세요.");
 				}
 			}
 		}
@@ -316,15 +312,15 @@ public class HeroAttack {
 			if (target == heroStatus.solNum.size()) {
 				System.out.println(Monster.monsName + "이(가) " + heroStatus.name + "를 공격!");
 				heroStatus.hp = heroStatus.hp - sum;
-				System.out.println(heroStatus.name + "이(가) 받은 데미지는 " + sum + "입니다");
+				System.out.println(heroStatus.name + "이(가) 받은 데미지는 " + sum + "입니다.");
 				System.out.println("=====================================");
 				break;
 			} else if (heroStatus.solNum.get(target).solHp > 0) {
 				System.out.println(Monster.monsName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
 				heroStatus.solNum.get(target).solHp -= sum;
-				System.out.println(heroStatus.solNum.get(target).solName + "이(가) 받은 데미지는 " + sum + "입니다");
+				System.out.println(heroStatus.solNum.get(target).solName + "이(가) 받은 데미지는 " + sum + "입니다.");
 				if (heroStatus.solNum.get(target).solHp <= 0) {
-					System.out.println(heroStatus.solNum.get(target).solName + "이 쓰러졌습니다!");
+					System.out.println(heroStatus.solNum.get(target).solName + "이(가) 쓰러졌습니다!");
 				}
 				break;
 			} else {
