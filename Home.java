@@ -6,7 +6,7 @@ public class Home {
 	static Scanner in = new Scanner(System.in);
 	static int boss_clear = 0;
 
-	static void selectMap() {
+	static void selectMap() throws InterruptedException {
 		int map;
 		System.out.println("1.던전 \n2.상점 \n3.용병소 \n4.여관\n5.아이템 사용\n6.캐릭터 정보 확인");
 		System.out.printf("장소 번호를 입력하세요. : ");
@@ -14,13 +14,8 @@ public class Home {
 		if (map == 1) {
 			System.out.println("=====================================");
 			for (int i = 0; i < 3; i++) {
-				try {
-					Thread.sleep(500);
-					System.out.print(".");
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				Thread.sleep(500);
+				System.out.print(".");
 			}
 			System.out.println("던전 입구에 도착했습니다.");
 			System.out.println("=====================================");
@@ -28,13 +23,8 @@ public class Home {
 		} else if (map == 2) {
 			System.out.println("=====================================");
 			for (int i = 0; i < 3; i++) {
-				try {
-					Thread.sleep(500);
-					System.out.print(".");
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				Thread.sleep(500);
+				System.out.print(".");
 			}
 			System.out.println("상점에 도착했습니다.");
 			System.out.println("=====================================");
@@ -42,13 +32,8 @@ public class Home {
 		} else if (map == 3) {
 			System.out.println("=====================================");
 			for (int i = 0; i < 3; i++) {
-				try {
 					Thread.sleep(500);
 					System.out.print(".");
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 			}
 			System.out.println("용병소에 도착했습니다.");
 			System.out.println("=====================================");
@@ -78,7 +63,7 @@ public class Home {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		for (int i = 0; i < 9; i++) {
 			SoldierCamp.unhiredSoldier.add(new solClass(i + 1));
 		}
