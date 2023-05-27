@@ -45,6 +45,8 @@ public class Shop {
 					System.out.printf("구매할 물건 개수를 입력하세요. :");
 					productcnt = in.nextInt();
 					System.out.println("=====================================");
+					if (productcnt == 0)
+						continue;
 					if (productnum == 1) {
 						System.out.printf("가격은 %d입니다.\n", 10 * productcnt);
 						if (checkMind()) {
@@ -118,6 +120,8 @@ public class Shop {
 					System.out.printf("판매할 물건 개수를 입력하세요. :");
 					productcnt = in.nextInt();
 					System.out.println("=====================================");
+					if (productcnt == 0)
+						continue;
 					if (productnum == 1) {
 						System.out.printf("가격은 %d입니다.\n", 5 * productcnt);
 						if (checkMind()) {
@@ -179,6 +183,17 @@ public class Shop {
 				System.out.println("=====================================");
 			} else if (selectshop == 3) {
 				System.out.println("왔던 곳으로 돌아갑니다.");
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					try {
+						Thread.sleep(500);
+						System.out.print(".");
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				System.out.println("!\n마을에 도착했습니다.");
 				System.out.println("=====================================");
 				break;
 			} else

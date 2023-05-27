@@ -46,6 +46,7 @@ public class Inn {
 	static void takePrice() {
 		heroStatus.money -= charge;
 		System.out.println("숙박료를 " + charge + "만큼 지불했습니다.");
+		charge = 0;
 		System.out.println("=====================================");
 	}
 
@@ -67,6 +68,18 @@ public class Inn {
 			else if (selection == 5) {
 				if (charge == 0) {
 					System.out.println("왔던 곳으로 돌아갑니다.");
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						try {
+							Thread.sleep(500);
+							System.out.print(".");
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					System.out.println("마을에 도착했습니다.");
+					System.out.println("=====================================");
 					break;
 				} else
 					System.out.println("숙박료를 지불한 후 다시 시도해주세요.");

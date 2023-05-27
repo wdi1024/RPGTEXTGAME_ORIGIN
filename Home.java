@@ -13,14 +13,57 @@ public class Home {
 		map = in.nextInt();
 		if (map == 1) {
 			System.out.println("=====================================");
+			for (int i = 0; i < 3; i++) {
+				try {
+					Thread.sleep(500);
+					System.out.print(".");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println("던전 입구에 도착했습니다.");
+			System.out.println("=====================================");
 			SelectingDungeon.StartDungeon();
 		} else if (map == 2) {
+			System.out.println("=====================================");
+			for (int i = 0; i < 3; i++) {
+				try {
+					Thread.sleep(500);
+					System.out.print(".");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println("상점에 도착했습니다.");
 			System.out.println("=====================================");
 			Shop.StartShop();
 		} else if (map == 3) {
 			System.out.println("=====================================");
+			for (int i = 0; i < 3; i++) {
+				try {
+					Thread.sleep(500);
+					System.out.print(".");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			System.out.println("용병소에 도착했습니다.");
+			System.out.println("=====================================");
 			SoldierCamp.StartSoldierCamp();
 		} else if (map == 4) {
+			System.out.println("=====================================");
+			for (int i = 0; i < 3; i++) {
+				try {
+					Thread.sleep(500);
+					System.out.print(".");
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			System.out.println("여관에 도착했습니다.");
 			System.out.println("=====================================");
 			Inn.InnStart();
 		} else if (map == 5) {

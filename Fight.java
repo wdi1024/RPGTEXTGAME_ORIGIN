@@ -5,7 +5,7 @@ public class Fight {
 	static void selectAttack() {
 		Scanner in = new Scanner(System.in);
 		if (SelectingDungeon.isItBossDungeon == false) {
-			System.out.println("몬스터와 조우했습니다.");
+			System.out.println("몬스터 " + Monster.monsName + "과(와) 조우했습니다.");
 			while (true) {
 				// 행동 선택;
 				System.out.println("0. 전투상황");
@@ -21,7 +21,7 @@ public class Fight {
 					System.out.println(Monster.monsName);
 					System.out.println("HP = " + Monster.monsHp);
 					System.out.println("Power = " + Monster.monsPower);
-					System.out.println("HP = " + Monster.monsDefense);
+					System.out.println("Defense = " + Monster.monsDefense);
 					System.out.println("====================================");
 				} else if (selection == 1) {
 					HeroAttack.StartHeroAttack();
@@ -55,11 +55,11 @@ public class Fight {
 					break;
 				}
 			}
-		} 
-		
+		}
+
 		else if (SelectingDungeon.isItBossDungeon == true) {
 			int cnt = 0;
-			System.out.println("보스 몬스터와 조우했습니다.");
+			System.out.println("보스 몬스터 " + Monster.monsName + "과(와) 조우했습니다.");
 			while (true) {
 				if (cnt == 20) {
 					System.out.println("HP = " + Monster.monsHp);
