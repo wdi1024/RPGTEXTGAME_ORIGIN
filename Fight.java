@@ -62,16 +62,10 @@ public class Fight {
 			System.out.println("보스 몬스터 " + Monster.monsName + "과(와) 조우했습니다.");
 			while (true) {
 				if (cnt == 20) {
-					System.out.println("HP = " + Monster.monsHp);
-					System.out.println("Power = " + Monster.monsPower);
-					System.out.println("HP = " + Monster.monsDefense);
 					Monster.monsHp *= 2;
 					Monster.monsPower *= 2;
 					Monster.monsDefense *= 2;
-					System.out.println("20턴이 지나 보스의 인내심이 한계에 달해 광폭화됩니다. (모든 스탯 2배)");
-					System.out.println("HP = " + Monster.monsHp);
-					System.out.println("Power = " + Monster.monsPower);
-					System.out.println("HP = " + Monster.monsDefense);
+					System.out.println("20턴이 지나 보스의 인내심이 한계에 달해 광폭화됩니다. (몬스터의 모든 능력치, 체력 2배)");
 				}
 				// 행동 선택;
 				System.out.println("0. 전투상황");
