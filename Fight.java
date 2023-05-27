@@ -73,7 +73,7 @@ public class Fight {
 				System.out.println("2. 아이템 사용");
 				System.out.println("3. 방어");
 				System.out.println("4. 후퇴");
-				System.out.printf("어떻게 하시겠습니까?");
+				System.out.printf("어떻게 하시겠습니까? : ");
 				int selection = in.nextInt();
 				System.out.println("====================================");
 				if (selection == 0) {
@@ -97,10 +97,10 @@ public class Fight {
 				}
 				if (Monster.monsHp <= 0) {
 					System.out.println(Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
-					System.out.println("=====================================");
 					heroStatus.exp += Monster.monsExp;
 					heroStatus.money += Monster.monsMoney;
 					AfterFight.Drop();
+					System.out.println("=====================================");
 				}
 				if (heroStatus.hp <= 0) {
 					System.out.println(heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");

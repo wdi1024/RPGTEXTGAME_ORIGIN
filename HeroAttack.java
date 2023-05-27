@@ -26,6 +26,8 @@ public class HeroAttack {
 					if (Monster.monsHp <= 0)
 						break;
 				}
+				if (Monster.monsHp <= 0)
+					break;
 				// monster 공격
 				heroAttacked(Monster.monsterAttack(Monster.monsPower));
 				break;

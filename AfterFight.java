@@ -16,7 +16,7 @@ public class AfterFight {
 			if (b < 40) {
 				MyInventory.mpPotionCnt++;
 				System.out.println("마나 회복 포션 드랍");
-			} 
+			}
 			if (a == 1) {
 				if (heroStatus.job == "전사") {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == false)
@@ -46,12 +46,11 @@ public class AfterFight {
 			int a = random.nextInt(100);
 			int b = random.nextInt(100);
 			int c = random.nextInt(100);
-					
 
 			if (a < 40) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 20) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -68,11 +67,11 @@ public class AfterFight {
 			int b = random.nextInt(100);
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
-			
+
 			if (a < 40) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 20) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -94,11 +93,11 @@ public class AfterFight {
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
-			
+
 			if (a < 40) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 20) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -124,11 +123,11 @@ public class AfterFight {
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
-			
+
 			if (a < 40) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 20) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -154,11 +153,11 @@ public class AfterFight {
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
-			
+
 			if (a < 50) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 30) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -210,11 +209,11 @@ public class AfterFight {
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
-			
+
 			if (a < 50) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 40) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -244,11 +243,11 @@ public class AfterFight {
 			int c = random.nextInt(100);
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
-			
+
 			if (a < 60) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 40) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -279,11 +278,11 @@ public class AfterFight {
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
 			int f = random.nextInt(100);
-			
+
 			if (a < 60) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 40) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -314,11 +313,11 @@ public class AfterFight {
 			int d = random.nextInt(100);
 			int e = random.nextInt(100);
 			int f = random.nextInt(100);
-			
+
 			if (a < 60) {
 				MyInventory.hpPotionCnt++;
 				System.out.println("체력 회복 포션 드랍");
-			} 
+			}
 			if (b < 40) {
 				MyInventory.powerPotionCnt++;
 				System.out.println("파워 증강 포션 드랍");
@@ -352,21 +351,21 @@ public class AfterFight {
 				MyInventory.hpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 5; i < randomhp; i++) {
 				MyInventory.mpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 0; i < randompw; i++) {
 				MyInventory.powerPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)/n", cnt);
+			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
 
 			if (randomNumber < 50) {
 				MyInventory.maxHpPotionCnt++;
@@ -393,21 +392,21 @@ public class AfterFight {
 				MyInventory.hpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 0; i < randommp; i++) {
 				MyInventory.mpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 0; i < randompw; i++) {
 				MyInventory.powerPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)/n", cnt);
+			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
 
 			if (randomNumber < 50) {
 				MyInventory.maxHpPotionCnt++;
@@ -434,21 +433,21 @@ public class AfterFight {
 				MyInventory.hpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 0; i < randommp; i++) {
 				MyInventory.mpPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)", cnt);
+			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
 
 			cnt = 0;
 			for (int i = 0; i < randompw; i++) {
 				MyInventory.powerPotionCnt++;
 				cnt++;
 			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)/n", cnt);
+			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
 
 			if (randomNumber < 50) {
 				MyInventory.maxHpPotionCnt++;
