@@ -21,10 +21,15 @@ public class HeroAttack {
 				if (Monster.monsHp <= 0)
 					break;
 				for (int i = 0; i < heroStatus.solNum.size(); i++) {
-					System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다.");
-					Monster.monsterAttacked(SolSkill.solskill(i));
-					if (Monster.monsHp <= 0)
-						break;
+					if (heroStatus.solNum.get(i).solHp > 0) {
+						System.out.println(heroStatus.solNum.get(i).solName + "의 공격입니다.");
+						Monster.monsterAttacked(SolSkill.solskill(i));
+						if (Monster.monsHp <= 0)
+							break;
+					} else {
+						continue;
+					}
+
 				}
 				if (Monster.monsHp <= 0)
 					break;

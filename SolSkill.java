@@ -99,7 +99,7 @@ public class SolSkill {
 			} else if (randomNumber > 30 && randomNumber <= 58) {
 				System.out.println("케이토 얼음창");
 				sum = heroStatus.solNum.get(solnum).solPower;
-			}  else {
+			} else {
 				System.out.println("Miss!");
 			}
 		}
@@ -156,7 +156,7 @@ public class SolSkill {
 			} else if (95 < randomNumber) {
 				System.out.println("간달프 얼음 폭풍 (힘 100배 증가)");
 				sum = heroStatus.solNum.get(solnum).solPower * 100;
-			} else if  (randomNumber > 30 && randomNumber <= 58) {
+			} else if (randomNumber > 30 && randomNumber <= 58) {
 				System.out.println("간달프 어둠의 손길");
 				sum = heroStatus.solNum.get(solnum).solPower;
 			} else {
@@ -181,11 +181,11 @@ public class SolSkill {
 				for (int i = 0; i < heroStatus.solNum.size(); i++)
 					heroStatus.solNum.get(i).solHp += 50;
 			} else {
-				System.out.println("안나 죽음의 선고");
+				System.out.println("마리아 죽음의 선고");
 				sum = heroStatus.solNum.get(solnum).solPower;
 			}
 		}
-	
+
 		return sum;
 	}
 }
