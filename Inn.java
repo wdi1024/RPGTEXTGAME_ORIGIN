@@ -50,7 +50,7 @@ public class Inn {
 		System.out.println("=====================================");
 	}
 
-	static void InnStart() {
+	static void InnStart() throws InterruptedException {
 		while (true) {
 			int selection;
 			System.out.println("1.캐릭터 회복\n2.용병 회복\n3.보유금액 확인\n4.숙박비 지불\n5.돌아가기");
@@ -70,13 +70,8 @@ public class Inn {
 					System.out.println("왔던 곳으로 돌아갑니다.");
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("마을에 도착했습니다.");
 					System.out.println("=====================================");

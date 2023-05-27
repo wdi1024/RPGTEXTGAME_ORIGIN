@@ -95,7 +95,7 @@ public class heroStatus {
 				heroStatus.maxMp += 2;
 			}
 			System.out.println("==============================================");
-			System.out.println("레벨이 올라가 능령치가 상승했습니다!");
+			System.out.println("레벨이 올라가 능력치가 상승했습니다!");
 			System.out.println("==============================================");
 			heroStatus.printStatus();
 		}
