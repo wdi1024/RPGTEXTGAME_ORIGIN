@@ -60,7 +60,11 @@ public class Inn {
 			if (selection == 1)
 				rest();
 			else if (selection == 2)
-				recoverSol();
+				if (heroStatus.solNum.size() == 0) {
+					System.out.println("고용한 용병이 없습니다.");
+				} else {
+					recoverSol();		
+				}
 			else if (selection == 3)
 				checkMoney();
 			else if (selection == 4)
