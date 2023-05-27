@@ -42,7 +42,7 @@ public class SolSkill {
 			}
 		}
 		// 용병 3
-		if (heroStatus.solNum.get(solnum).solNum == 2) {
+		if (heroStatus.solNum.get(solnum).solNum == 3) {
 			int randomNumber = random.nextInt(100) + 1;
 
 			if (40 < randomNumber && randomNumber <= 70) {
@@ -62,7 +62,7 @@ public class SolSkill {
 				System.out.println("안나 신의 수호");
 				sum = heroStatus.solNum.get(solnum).solPower;
 			}
-		}		
+		}
 		return sum;
-	}	
-}	
+	}
+}
