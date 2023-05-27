@@ -106,6 +106,18 @@ public class SelectingDungeon {
 				System.out.print("! ");
 				Fight.selectAttack();
 				heroStatus.checkLevelup();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					try {
+						Thread.sleep(500);
+						System.out.print(".");
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+				System.out.println("=====================================");
 			}
 			// 던전 2
 			if (dungeonNum == 2) {
@@ -194,6 +206,18 @@ public class SelectingDungeon {
 				System.out.print("! ");
 				Fight.selectAttack();
 				heroStatus.checkLevelup();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					try {
+						Thread.sleep(500);
+						System.out.print(".");
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+				System.out.println("=====================================");
 			}
 			// 던전 3
 			if (dungeonNum == 3) {
@@ -289,6 +313,18 @@ public class SelectingDungeon {
 				System.out.print("! ");
 				Fight.selectAttack();
 				heroStatus.checkLevelup();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					try {
+						Thread.sleep(500);
+						System.out.print(".");
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+				System.out.println("=====================================");
 			}
 			// 던전 4
 			if (dungeonNum == 4) {
@@ -384,6 +420,18 @@ public class SelectingDungeon {
 				System.out.print("! ");
 				Fight.selectAttack();
 				heroStatus.checkLevelup();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					try {
+						Thread.sleep(500);
+						System.out.print(".");
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+				System.out.println("=====================================");
 			}
 			// 보스던전 1
 			if (dungeonNum == 5) {
