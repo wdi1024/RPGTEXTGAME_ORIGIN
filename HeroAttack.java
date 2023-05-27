@@ -41,7 +41,8 @@ public class HeroAttack {
 		while (true) {
 			if (heroStatus.selection == 1) {// 직업이 전사일 경우
 				System.out.println("1. 쓰러스트");
-				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) {		// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로 구분																	
+				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) { // 히어로 스킬에서 스킬북으로 스킬 배웠는지 true
+																					// false로 구분
 					System.out.println("2. 파워 슬래시");
 				}
 				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
@@ -168,7 +169,8 @@ public class HeroAttack {
 				}
 			} else if (heroStatus.selection == 3) {// 직업이 마법사일 경우
 				System.out.println("1. 매직클로");
-				if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true / false로 구분
+				if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true /
+																						// false로 구분
 					System.out.println("2. 기원참 스킬");
 				}
 				if (HeroSkill.hasmagician3Skillbook(MyInventory.skillbook) == true) {
@@ -229,9 +231,10 @@ public class HeroAttack {
 				} else {
 					System.out.println("알맞은 번호를 입력해주세요.");
 				}
-			} else if (heroStatus.selection == 4) {			// 직업이 도적일 경우
+			} else if (heroStatus.selection == 4) { // 직업이 도적일 경우
 				System.out.println("1. 표창던지기");
-				if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로 구분													
+				if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
+																					// 구분
 					System.out.println("2. 새비지 블로우");
 				}
 				if (HeroSkill.hasthief3Skillbook(MyInventory.skillbook) == true) {
@@ -319,8 +322,10 @@ public class HeroAttack {
 				System.out.println(Monster.monsName + "이 " + heroStatus.solNum.get(target).solName + "를 공격!");
 				heroStatus.solNum.get(target).solHp -= sum;
 				System.out.println(heroStatus.solNum.get(target).solName + "이(가) 받은 데미지는 " + sum + "입니다.");
+				System.out.println("=====================================");
 				if (heroStatus.solNum.get(target).solHp <= 0) {
 					System.out.println(heroStatus.solNum.get(target).solName + "이(가) 쓰러졌습니다!");
+					System.out.println("=====================================");
 				}
 				break;
 			} else {
