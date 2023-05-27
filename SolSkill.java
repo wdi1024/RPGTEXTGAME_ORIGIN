@@ -49,17 +49,30 @@ public class SolSkill {
 
 			if (40 < randomNumber && randomNumber <= 70) {
 				System.out.println("안나 치유의 손길 (HP 10 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 30;
+				heroStatus.solNum.get(solnum).solHp += 30;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (70 < randomNumber && randomNumber <= 90) {
 				System.out.println("안나 생명력 흡수 (입힌 데미지만큼 체력 회복)");
 				sum = heroStatus.solNum.get(solnum).solMagic * 5;
 				heroStatus.solNum.get(solnum).solHp += sum;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (90 < randomNumber) {
 				System.out.println("안나 대규모 치유 (전체 HP 30 증가, 안나는 추가 10 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 10;
+				heroStatus.solNum.get(solnum).solHp += 10;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 				// 전체 용병에게 적용
-				for (int i = 0; i < heroStatus.solNum.size(); i++)
+				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					heroStatus.solNum.get(i).solHp += 30;
+					if (heroStatus.solNum.get(i).solHp > heroStatus.solNum.get(i).solMaxHp) {
+						heroStatus.solNum.get(i).solHp = heroStatus.solNum.get(i).solMaxHp;
+					}
+				}
 			} else {
 				System.out.println("안나 신의 수호");
 				sum = heroStatus.solNum.get(solnum).solPower;
@@ -109,17 +122,31 @@ public class SolSkill {
 
 			if (40 < randomNumber && randomNumber <= 70) {
 				System.out.println("메이 신성한 빛 (HP 10 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 40;
+				heroStatus.solNum.get(solnum).solHp += 40;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (70 < randomNumber && randomNumber <= 90) {
 				System.out.println("메이 성스러운 회복 (입힌 데미지만큼 체력 회복)");
 				sum = heroStatus.solNum.get(solnum).solMagic * 10;
 				heroStatus.solNum.get(solnum).solHp += sum;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (90 < randomNumber) {
-				System.out.println("메이 신의 손길 (전체 HP 30 증가, 안나는 추가 10 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 20;
+				System.out.println("메이 신의 손길 (전체 HP 40 증가, 안나는 추가 20 증가");
+				heroStatus.solNum.get(solnum).solHp += 20;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 				// 전체 용병에게 적용
-				for (int i = 0; i < heroStatus.solNum.size(); i++)
+				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					heroStatus.solNum.get(i).solHp += 40;
+					if (heroStatus.solNum.get(i).solHp > heroStatus.solNum.get(i).solMaxHp) {
+						heroStatus.solNum.get(i).solHp = heroStatus.solNum.get(i).solMaxHp;
+					}
+				}
+
 			} else {
 				System.out.println("메이 마력 강화");
 				sum = heroStatus.solNum.get(solnum).solPower;
@@ -168,18 +195,31 @@ public class SolSkill {
 			int randomNumber = random.nextInt(100) + 1;
 
 			if (40 < randomNumber && randomNumber <= 70) {
-				System.out.println("마리아 천사의 가호 (HP 10 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 50;
+				System.out.println("마리아 천사의 가호 (HP 50 증가");
+				heroStatus.solNum.get(solnum).solHp += 50;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (70 < randomNumber && randomNumber <= 90) {
 				System.out.println("마리아 마법 봉인 (입힌 데미지만큼 체력 회복)");
 				sum = heroStatus.solNum.get(solnum).solMagic * 15;
 				heroStatus.solNum.get(solnum).solHp += sum;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 			} else if (90 < randomNumber) {
 				System.out.println("마리아 치유의 성역 (전체 HP 50 증가, 안나는 추가 30 증가");
-				sum = heroStatus.solNum.get(solnum).solHp + 30;
+				heroStatus.solNum.get(solnum).solHp += 30;
+				if (heroStatus.solNum.get(solnum).solHp > heroStatus.solNum.get(solnum).solMaxHp) {
+					heroStatus.solNum.get(solnum).solHp = heroStatus.solNum.get(solnum).solMaxHp;
+				}
 				// 전체 용병에게 적용
-				for (int i = 0; i < heroStatus.solNum.size(); i++)
+				for (int i = 0; i < heroStatus.solNum.size(); i++) {
 					heroStatus.solNum.get(i).solHp += 50;
+					if (heroStatus.solNum.get(i).solHp > heroStatus.solNum.get(i).solMaxHp) {
+						heroStatus.solNum.get(i).solHp = heroStatus.solNum.get(i).solMaxHp;
+					}
+				}
 			} else {
 				System.out.println("마리아 죽음의 선고");
 				sum = heroStatus.solNum.get(solnum).solPower;
