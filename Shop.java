@@ -170,7 +170,7 @@ public class Shop {
 		}
 	}
 
-	static void StartShop() {
+	static void StartShop() throws InterruptedException {
 		while (true) {
 			System.out.println("1.구매/판매\n2.인벤토리 확인\n3.돌아가기");
 			System.out.printf("행동 번호를 입력하세요. :");
@@ -185,13 +185,8 @@ public class Shop {
 				System.out.println("왔던 곳으로 돌아갑니다.");
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.println("!\n마을에 도착했습니다.");
 				System.out.println("=====================================");
