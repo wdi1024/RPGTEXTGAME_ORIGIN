@@ -92,7 +92,7 @@ public class SoldierCamp {
 							int wss = sc.nextInt();
 							System.out.println("=====================================");
 							if (wss < heroStatus.solNum.size() && waitingSoldier.size() < 5) {
-								System.out.println(heroStatus.solNum.get(wss) + "을(를) 대기시켰습니다.");
+								System.out.println(heroStatus.solNum.get(wss).solName + "을(를) 대기시켰습니다.");
 								System.out.println("=====================================");
 								waitingSoldier.add(heroStatus.solNum.get(wss));
 								heroStatus.solNum.remove(heroStatus.solNum.get(wss));
@@ -113,7 +113,7 @@ public class SoldierCamp {
 							int wss = sc.nextInt();
 							System.out.println("=====================================");
 							if (wss < waitingSoldier.size() && heroStatus.solNum.size() < 5) {
-								System.out.println(waitingSoldier.get(wss) + "을(를) 데려왔습니다.");
+								System.out.println(waitingSoldier.get(wss).solName + "을(를) 데려왔습니다.");
 								System.out.println("=====================================");
 								heroStatus.solNum.add(waitingSoldier.get(wss));
 								waitingSoldier.remove(waitingSoldier.get(wss));
@@ -144,7 +144,7 @@ public class SoldierCamp {
 					System.out.printf("해고할 용병 번호를 입력하세요. : ");
 					int fs = sc.nextInt();
 					if (fs < heroStatus.solNum.size()) {
-						System.out.println(heroStatus.solNum.get(fs) + "을(를) 해고했습니다.");
+						System.out.println(heroStatus.solNum.get(fs).solName + "을(를) 해고했습니다.");
 						System.out.println("=====================================");
 						unhiredSoldier.add(heroStatus.solNum.get(fs));
 						heroStatus.solNum.remove(heroStatus.solNum.get(fs));
