@@ -32,8 +32,8 @@ public class Home {
 		} else if (map == 3) {
 			System.out.println("=====================================");
 			for (int i = 0; i < 3; i++) {
-					Thread.sleep(500);
-					System.out.print(".");
+				Thread.sleep(500);
+				System.out.print(".");
 			}
 			System.out.println("용병소에 도착했습니다.");
 			System.out.println("=====================================");
@@ -41,12 +41,8 @@ public class Home {
 		} else if (map == 4) {
 			System.out.println("=====================================");
 			for (int i = 0; i < 3; i++) {
-				try {
-					Thread.sleep(500);
-					System.out.print(".");
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				Thread.sleep(500);
+				System.out.print(".");
 			}
 			System.out.println("여관에 도착했습니다.");
 			System.out.println("=====================================");
