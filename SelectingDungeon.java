@@ -6,7 +6,7 @@ public class SelectingDungeon {
 	static int dungeonNum;
 	static boolean isItBossDungeon;
 
-	static void StartDungeon() throws InterruptedException{
+	static void StartDungeon() throws InterruptedException {
 		Scanner in = new Scanner(System.in);
 		Random random = new Random();
 
@@ -408,7 +408,7 @@ public class SelectingDungeon {
 				System.out.print("! ");
 				Fight.selectAttack();
 				heroStatus.checkLevelup();
-				if (Monster.monsHp == 0) {
+				if (Monster.monsHp <= 0) {
 					Home.boss_clear = 1;
 					break;
 				}
