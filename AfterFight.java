@@ -19,23 +19,19 @@ public class AfterFight {
 			}
 			if (a < 15) {
 				if (heroStatus.job == "전사") {
-					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == false)
-						System.out.println("파워 슬래시 스킬북 드랍");
+					System.out.println("파워 슬래시 스킬북 드랍");
 					MyInventory.addItem("파워 슬래시 스킬북");
 				}
 				if (heroStatus.job == "궁수") {
-					if (HeroSkill.hasgungsu2Skillbook(MyInventory.skillbook) == false)
-						System.out.println("더블 샷 스킬북 드랍");
+					System.out.println("더블 샷 스킬북 드랍");
 					MyInventory.addItem("더블 샷 스킬북");
 				}
 				if (heroStatus.job == "마법사") {
-					if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == false)
-						System.out.println("기원참 스킬북 드랍");
+					System.out.println("기원참 스킬북 드랍");
 					MyInventory.addItem("기원참 스킬북");
 				}
 				if (heroStatus.job == "도적") {
-					if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == false)
-						System.out.println("새비지 블로우 스킬북 드랍");
+					System.out.println("새비지 블로우 스킬북 드랍");
 					MyInventory.addItem("새비지 블로우 스킬북");
 				}
 			}
@@ -180,23 +176,19 @@ public class AfterFight {
 			}
 			if (a < 15) {
 				if (heroStatus.job == "전사") {
-					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == false)
-						System.out.println("사자의 노래 스킬북 드랍");
+					System.out.println("사자의 노래 스킬북 드랍");
 					MyInventory.addItem("사자의 노래 스킬북");
 				}
 				if (heroStatus.job == "궁수") {
-					if (HeroSkill.hasgungsu3Skillbook(MyInventory.skillbook) == false)
-						System.out.println("화살비 스킬북 드랍");
+					System.out.println("화살비 스킬북 드랍");
 					MyInventory.addItem("화살비 스킬북");
 				}
 				if (heroStatus.job == "마법사") {
-					if (HeroSkill.hasmagician3Skillbook(MyInventory.skillbook) == false)
-						System.out.println("파괴광선 스킬북 드랍");
+					System.out.println("파괴광선 스킬북 드랍");
 					MyInventory.addItem("파괴광선 스킬북");
 				}
 				if (heroStatus.job == "도적") {
-					if (HeroSkill.hasthief3Skillbook(MyInventory.skillbook) == false)
-						System.out.println("암살 스킬북 드랍");
+					System.out.println("암살 스킬북 드랍");
 					MyInventory.addItem("암살 스킬북");
 				}
 			}
