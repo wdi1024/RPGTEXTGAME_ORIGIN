@@ -293,15 +293,15 @@ public class SelectingDungeon {
 
 					int randomValue = random.nextInt(100);
 					if (randomValue < 20) {
-						monster = new Golem();
-					} else if (randomValue >= 20 && randomValue < 40) {
-						monster = new Spider();
-					} else if (randomValue >= 40 && randomValue < 60) {
-						monster = new Centaurus();
-					} else if (randomValue >= 60 && randomValue < 80) {
 						monster = new Ghoul();
-					} else {
+					} else if (randomValue >= 20 && randomValue < 40) {
 						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
@@ -318,15 +318,15 @@ public class SelectingDungeon {
 
 					randomValue = random.nextInt(100);
 					if (randomValue < 20) {
-						monster = new Golem();
-					} else if (randomValue >= 20 && randomValue < 40) {
-						monster = new Spider();
-					} else if (randomValue >= 40 && randomValue < 60) {
-						monster = new Centaurus();
-					} else if (randomValue >= 60 && randomValue < 80) {
 						monster = new Ghoul();
-					} else {
+					} else if (randomValue >= 20 && randomValue < 40) {
 						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
@@ -342,15 +342,15 @@ public class SelectingDungeon {
 
 					randomValue = random.nextInt(100);
 					if (randomValue < 20) {
-						monster = new Golem();
-					} else if (randomValue >= 20 && randomValue < 40) {
-						monster = new Spider();
-					} else if (randomValue >= 40 && randomValue < 60) {
-						monster = new Centaurus();
-					} else if (randomValue >= 60 && randomValue < 80) {
 						monster = new Ghoul();
-					} else {
+					} else if (randomValue >= 20 && randomValue < 40) {
 						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
