@@ -6,7 +6,7 @@ public class SelectingDungeon {
 	static int dungeonNum;
 	static boolean isItBossDungeon;
 
-	static void StartDungeon() {
+	static void StartDungeon() throws InterruptedException{
 		Scanner in = new Scanner(System.in);
 		Random random = new Random();
 
@@ -20,13 +20,8 @@ public class SelectingDungeon {
 				System.out.println("왔던 곳으로 돌아갑니다.");
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.println("마을에 도착했습니다.");
 				System.out.println("=====================================");
@@ -51,13 +46,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("! ");
 					System.out.println("신비의 숲에 입장했습니다. ");
@@ -76,13 +66,8 @@ public class SelectingDungeon {
 
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
@@ -99,31 +84,20 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
 					heroStatus.checkLevelup();
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
 					System.out.println("=====================================");
 				}
-
 			}
 			// 던전 2
 			if (dungeonNum == 2) {
@@ -150,13 +124,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("! ");
 					System.out.println("빛 바랜 성에 입장했습니다. ");
@@ -178,13 +147,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
@@ -205,31 +169,20 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
 					heroStatus.checkLevelup();
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
 					System.out.println("=====================================");
 				}
-
 			}
 			// 던전 3
 			if (dungeonNum == 3) {
@@ -259,13 +212,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("! ");
 					System.out.println("화염의 강에 입장했습니다. ");
@@ -289,13 +237,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
@@ -318,26 +261,16 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
 					heroStatus.checkLevelup();
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
 					System.out.println("=====================================");
@@ -372,13 +305,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("! ");
 					System.out.println("세계의 끝에 입장했습니다. ");
@@ -402,13 +330,8 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
@@ -431,33 +354,23 @@ public class SelectingDungeon {
 					}
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.print("! ");
 					Fight.selectAttack();
 					heroStatus.checkLevelup();
 					System.out.println("=====================================");
 					for (int i = 0; i < 3; i++) {
-						try {
-							Thread.sleep(500);
-							System.out.print(".");
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
+						Thread.sleep(500);
+						System.out.print(".");
 					}
 					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
 					System.out.println("=====================================");
 				}
 
 			}
-			// 보스던전 1
+			// 보스던전
 			if (dungeonNum == 5) {
 				System.out.println("----- (보스) 파괴의 사원 -----.");
 				isItBossDungeon = true;
@@ -465,13 +378,8 @@ public class SelectingDungeon {
 				Monster monster = new Dragon();
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.println("! ");
 				System.out.println("보스 던전에 입장했습니다. ");
@@ -483,13 +391,8 @@ public class SelectingDungeon {
 				monster = new Dragon();
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.print("! ");
 				Fight.selectAttack();
@@ -499,13 +402,8 @@ public class SelectingDungeon {
 				monster = new Dragon();
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.print("! ");
 				Fight.selectAttack();
