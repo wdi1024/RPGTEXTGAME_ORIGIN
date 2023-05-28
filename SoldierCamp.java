@@ -14,15 +14,15 @@ public class SoldierCamp {
 	}
 
 	static void checkHiredSoldier() {
-		System.out.println("동행 중인 용병 목록");
-		System.out.println("-------------------------------------------");
-		for (int i = 0; i < heroStatus.solNum.size(); i++)
-			System.out.println(i + ". " + heroStatus.solNum.get(i).solName);
-		System.out.println("=====================================");
 		System.out.println("대기 중인 용병 목록");
 		System.out.println("-------------------------------------------");
 		for (int i = 0; i < waitingSoldier.size(); i++)
 			System.out.println(waitingSoldier.get(i).solName);
+		System.out.println("=====================================");
+		System.out.println("동행 중인 용병 목록");
+		System.out.println("-------------------------------------------");
+		for (int i = 0; i < heroStatus.solNum.size(); i++)
+			System.out.println(i + ". " + heroStatus.solNum.get(i).solName);
 	}
 
 	static void checkWaitingSoldier() {
@@ -98,6 +98,8 @@ public class SoldierCamp {
 								System.out.println("=====================================");
 								waitingSoldier.add(heroStatus.solNum.get(wss));
 								heroStatus.solNum.remove(heroStatus.solNum.get(wss));
+							} else if (wss < heroStatus.solNum.size() && waitingSoldier.size() >= 5) {
+								System.out.println("대기 용병 수가 최대입니다.");
 							} else if (wss == heroStatus.solNum.size()) {
 								System.out.println("이전 단계로 돌아갑니다.");
 								System.out.println("=====================================");
