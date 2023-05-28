@@ -31,7 +31,7 @@ public class SoldierCamp {
 		System.out.println("=====================================");
 	}
 
-	static void StartSoldierCamp() {
+	static void StartSoldierCamp() throws InterruptedException {
 		while (true) {
 			int sel, price = 100;
 			System.out.println("1.용병고용 \n2.용병대기소 \n3.용병해고 \n4.동행중인 용병확인\n5.대기중인 용병확인\n6.돌아가기");
@@ -165,13 +165,8 @@ public class SoldierCamp {
 				System.out.println("왔던 곳으로 돌아갑니다.");
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
-					try {
-						Thread.sleep(500);
-						System.out.print(".");
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
+					Thread.sleep(500);
+					System.out.print(".");
 				}
 				System.out.println("마을에 도착했습니다.");
 				System.out.println("=====================================");
