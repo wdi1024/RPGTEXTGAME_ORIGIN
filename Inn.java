@@ -5,9 +5,9 @@ public class Inn {
 	static Scanner in = new Scanner(System.in);
 
 	static void rest() {
-		if (heroStatus.money > charge) {
+		if (heroStatus.money > charge + heroStatus.level) {
 			if (heroStatus.hp < heroStatus.maxHp) {
-				charge++;
+				charge += heroStatus.level;
 				int heal = heroStatus.maxHp / 10;
 				if (heroStatus.hp + heal > heroStatus.maxHp)
 					heal = heroStatus.maxHp - heroStatus.hp;
@@ -63,7 +63,7 @@ public class Inn {
 				if (heroStatus.solNum.size() == 0) {
 					System.out.println("고용한 용병이 없습니다.");
 				} else {
-					recoverSol();		
+					recoverSol();
 				}
 			else if (selection == 3)
 				checkMoney();
