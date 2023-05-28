@@ -61,7 +61,7 @@ public class SoldierCamp {
 						if (heroStatus.money >= price) {
 							if (heroStatus.solNum.size() < 5) {
 								System.out.println(unhiredSoldier.get(hs).solName + "을(를) 고용했습니다.");
-								heroStatus.solNum.add(unhiredSoldier.get(hs));
+								heroStatus.solNum.add(new solClass(unhiredSoldier.get(hs).solNum));
 								unhiredSoldier.remove(hs);
 								heroStatus.money -= price;
 								System.out.println("=====================================");
@@ -116,7 +116,7 @@ public class SoldierCamp {
 							if (wss < waitingSoldier.size() && heroStatus.solNum.size() < 5) {
 								System.out.println(waitingSoldier.get(wss).solName + "을(를) 데려왔습니다.");
 								System.out.println("=====================================");
-								heroStatus.solNum.add(waitingSoldier.get(wss));
+								heroStatus.solNum.add(new solClass(unhiredSoldier.get(wss).solNum));
 								waitingSoldier.remove(waitingSoldier.get(wss));
 							} else if (wss == waitingSoldier.size()) {
 								System.out.println("이전 단계로 돌아갑니다.");

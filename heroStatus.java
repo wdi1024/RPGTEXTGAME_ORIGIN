@@ -94,6 +94,51 @@ public class heroStatus {
 				heroStatus.mp += 2;
 				heroStatus.maxMp += 2;
 			}
+			for (int i = 0; i < heroStatus.solNum.size(); i++) {
+				if (heroStatus.solNum.get(i).solNum == 1) {
+					heroStatus.solNum.get(i).solHp += 10;
+					heroStatus.solNum.get(i).solMaxHp += 10;
+					heroStatus.solNum.get(i).solPower += 2;
+				} else if (heroStatus.solNum.get(i).solNum == 2) {
+					heroStatus.solNum.get(i).solHp += 5;
+					heroStatus.solNum.get(i).solMaxHp += 5;
+					heroStatus.solNum.get(i).solPower += 1;
+					heroStatus.solNum.get(i).solMagic += 5;
+				} else if (heroStatus.solNum.get(i).solNum == 3) {
+					heroStatus.solNum.get(i).solHp += 5;
+					heroStatus.solNum.get(i).solMaxHp += 5;
+					heroStatus.solNum.get(i).solPower += 1;
+					heroStatus.solNum.get(i).solMagic += 2;
+				} else if (heroStatus.solNum.get(i).solNum == 4) {
+					heroStatus.solNum.get(i).solHp += 30;
+					heroStatus.solNum.get(i).solMaxHp += 30;
+					heroStatus.solNum.get(i).solPower += 3;
+				} else if (heroStatus.solNum.get(i).solNum == 5) {
+					heroStatus.solNum.get(i).solHp += 8;
+					heroStatus.solNum.get(i).solMaxHp += 8;
+					heroStatus.solNum.get(i).solPower += 2;
+					heroStatus.solNum.get(i).solMagic += 7;
+				} else if (heroStatus.solNum.get(i).solNum == 6) {
+					heroStatus.solNum.get(i).solHp += 8;
+					heroStatus.solNum.get(i).solMaxHp += 8;
+					heroStatus.solNum.get(i).solPower += 2;
+					heroStatus.solNum.get(i).solMagic += 3;
+				} else if (heroStatus.solNum.get(i).solNum == 7) {
+					heroStatus.solNum.get(i).solHp += 40;
+					heroStatus.solNum.get(i).solMaxHp += 40;
+					heroStatus.solNum.get(i).solPower += 6;
+				} else if (heroStatus.solNum.get(i).solNum == 8) {
+					heroStatus.solNum.get(i).solHp += 14;
+					heroStatus.solNum.get(i).solMaxHp += 14;
+					heroStatus.solNum.get(i).solPower += 3;
+					heroStatus.solNum.get(i).solMagic += 10;
+				} else if (heroStatus.solNum.get(i).solNum == 9) {
+					heroStatus.solNum.get(i).solHp += 14;
+					heroStatus.solNum.get(i).solMaxHp += 14;
+					heroStatus.solNum.get(i).solPower += 3;
+					heroStatus.solNum.get(i).solMagic += 6;
+				}
+			}
 			System.out.println("==============================================");
 			System.out.println("레벨이 올라가 능력치가 상승했습니다!");
 			System.out.println("==============================================");
