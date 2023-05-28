@@ -13,7 +13,7 @@ public class solClass {
 	public solClass(int Num) {
 		if (Num == 1) {
 			solName = "하급 전사 리차드";// 힘과 체력이 높음
-			solHp = heroStatus.level * 10 + 60;
+			solHp = Home.hero.level * 10 + 60;
 			solMaxHp = heroStatus.level * 10 + 60;
 			solPower = heroStatus.level * 2 + 6;
 			solMagic = 0;
