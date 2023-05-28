@@ -44,17 +44,18 @@ public class Monster {
 			monster_power = 0;
 		}
 		sum = monster_power;
-		System.out.println(monsName + "의 공격입니다!");
 		return sum;
 	}
 
-	static void monsterAttacked(int sum) {
+	static void monsterAttacked(int sum) throws InterruptedException {
 		if (monsDefense >= sum) {
-			System.out.println(monsName + "이(가) 받은 데미지는 0입니다.");
+			Thread.sleep(1500);
+			System.out.println("\n > " + monsName + "이(가) 받은 데미지는 0입니다.");
 			monsHp = monsHp - 0;
 		} else {
 			monsHp = monsHp + monsDefense - sum;
-			System.out.println(monsName + "이(가) 받은 데미지는 " + (sum - monsDefense) + "입니다");
+			Thread.sleep(1500);
+			System.out.println("\n > " + monsName + "이(가) 받은 데미지는 " + (sum - monsDefense) + "입니다.");
 		}
 	}
 }

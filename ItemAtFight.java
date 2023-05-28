@@ -5,7 +5,7 @@ public class ItemAtFight {
 	static Scanner in = new Scanner(System.in);
 	static MyInventory k = new MyInventory();
 
-	static void StartItemAtFight() {
+	static void StartItemAtFight() throws InterruptedException {
 		while (true) {
 			System.out.println("0.돌아가기");
 			MyInventory.printInventory();

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Fight {
 
-	static void selectAttack() {
+	static void selectAttack() throws InterruptedException {
 		Scanner in = new Scanner(System.in);
 		if (SelectingDungeon.isItBossDungeon == false) {
 			System.out.println("몬스터 " + Monster.monsName + "과(와) 조우했습니다.");
@@ -13,7 +13,7 @@ public class Fight {
 				System.out.println("2. 아이템 사용");
 				System.out.println("3. 방어");
 				System.out.println("4. 후퇴");
-				System.out.printf("어떻게 하시겠습니까? : ");
+				System.out.printf("\n어떻게 하시겠습니까? : ");
 				int selection = in.nextInt();
 				System.out.println("====================================");
 				if (selection == 0) {
@@ -38,18 +38,21 @@ public class Fight {
 					System.out.println("=====================================");
 				}
 				if (Monster.monsHp <= 0) {
-					System.out.println(Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+					System.out.println("\n!!! " + Monster.monsName + "(이)가 죽었습니다. !!!");
 					heroStatus.exp += Monster.monsExp;
 					heroStatus.money += Monster.monsMoney;
 					AfterFight.Drop();
 					break;
 				}
 				if (heroStatus.hp <= 0) {
-					System.out.println(heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+					System.out.println(heroStatus.name + "(이)가 죽었습니다.");
 					heroStatus.hp = 1;
 					heroStatus.money = heroStatus.money * 1 / 2;
-					System.out.println("!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");
+					Thread.sleep(1000);
+					System.out.println("\n!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");
+					Thread.sleep(1000);
 					System.out.println("돈의 50%가 삭감됐습니다.");
+					Thread.sleep(1000);
 					System.out.println("던전 선택화면으로 되돌아왔습니다.");
 					System.out.println("=====================================");
 					break;
@@ -73,7 +76,7 @@ public class Fight {
 				System.out.println("2. 아이템 사용");
 				System.out.println("3. 방어");
 				System.out.println("4. 후퇴");
-				System.out.printf("어떻게 하시겠습니까? : ");
+				System.out.printf("\n어떻게 하시겠습니까? : ");
 				int selection = in.nextInt();
 				System.out.println("====================================");
 				if (selection == 0) {
@@ -96,7 +99,7 @@ public class Fight {
 					System.out.println("=====================================");
 				}
 				if (Monster.monsHp <= 0) {
-					System.out.println(Monster.monsName + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+					System.out.println(Monster.monsName + "(이)가 죽었습니다.");
 					heroStatus.exp += Monster.monsExp;
 					heroStatus.money += Monster.monsMoney;
 					AfterFight.Drop();
@@ -104,9 +107,10 @@ public class Fight {
 					break;
 				}
 				if (heroStatus.hp <= 0) {
-					System.out.println(heroStatus.name + "(이)가 죽었습니다. 사냥터에서 나갑니다.");
+					System.out.println(heroStatus.name + "(이)가 죽었습니다.");
 					heroStatus.hp = 1;
 					heroStatus.money = heroStatus.money * 1 / 2;
+					Thread.sleep(1000);
 					System.out.println("!!! 신의 은총을 받아 " + heroStatus.name + "이(가) 부활했습니다. !!!");
 					System.out.println("돈의 50%가 삭감됐습니다.");
 					System.out.println("던전 선택화면으로 되돌아왔습니다.");

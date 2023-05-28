@@ -12,10 +12,10 @@ public class heroStatus {
 		while (good != 1) {
 			System.out.printf("캐릭터의 이름을 입력하세요 : ");
 			name = in.nextLine();
-			System.out.print("캐릭터의 이름으로 " + name + "을 사용하시겠습니까?(네:1 아니요:2 입력) : ");
+			System.out.print("캐릭터의 이름으로 " + name + "을 사용하시겠습니까? (네:1 아니오:2 입력) : ");
 			good = in.nextInt();
 			if (good != 1 && good != 2)
-				System.out.println("네:1 아니요:2 중에서 입력해주세요.");
+				System.out.println("네:1 아니오:2 중에서 입력해주세요.");
 		}
 		System.out.println("==============================================");
 	}
@@ -23,7 +23,7 @@ public class heroStatus {
 	static void selectJob() {
 		while (selection < 1 || selection > 4) {
 			System.out.println("1.전사 \n2.궁수 \n3.마법사 \n4.도적 ");
-			System.out.printf("직업 번호를 선택하세요. : ");
+			System.out.printf("\n직업 번호를 선택하세요. : ");
 			selection = in.nextInt();
 			System.out.println("==============================================");
 			if (selection == 1) {

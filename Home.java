@@ -63,8 +63,20 @@ public class Home {
 		for (int i = 0; i < 9; i++) {
 			SoldierCamp.unhiredSoldier.add(new solClass(i + 1));
 		}
-
-		System.out.println("RPG TEXT GAME에 오신 것을 환영합니다.");
+		System.out.println("'다구리게임'에 오신 것을 환영합니다.\n");
+		Thread.sleep(1500);
+		System.out.println("평화로운 마을 리버스톤");
+		Thread.sleep(1500);
+		System.out.println("어느날 리버스톤에 드리워진 죽음의 그림자!!");
+		Thread.sleep(1500);
+		System.out.println("사람들은 죽어가고 마을은 황폐해져 간다..");
+		Thread.sleep(1500);
+		System.out.println("모두 극악무도한 죽음의 그림자 군주의 소행!!");
+		Thread.sleep(1500);
+		System.out.println("당신은 용병단을 구성해 죽음의 그림자 군주를 무찔러야 한다...!");
+		Thread.sleep(1500);
+		System.out.println("과연 당신은 리버스톤의 수호자가 될 수 있을것인가..!?\n");
+		Thread.sleep(1500);
 		System.out.printf("우선 ");
 		heroStatus.setName();
 		heroStatus.selectJob();
@@ -73,8 +85,12 @@ public class Home {
 		System.out.println("==============================================");
 		while (boss_clear != 1)
 			selectMap();
-
 		System.out.println("축하합니다! 보스를 처치하여 모험을 완료했습니다!\n수고하셨습니다!");
+		Thread.sleep(1500);
+		System.out.println("\n\n다구리게임");
+		Thread.sleep(1500);
+		System.out.println("객체지향프로그래밍 / 김형균 교수");
+		Thread.sleep(1500);
+		System.out.println("powered by 팀 오리진 (원대인, 김종민, 김주환)");
 	}
-
 }
