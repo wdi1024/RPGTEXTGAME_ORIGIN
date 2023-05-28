@@ -99,7 +99,7 @@ public class heroStatus {
 			System.out.println("==============================================");
 			heroStatus.printStatus();
 		}
-		if (heroStatus.level == 40) {
+		if (heroStatus.level == 15) {
 			if (selection == 1) {
 				heroStatus.job = "기사";
 				System.out.println("적정 레벨에 도달하여 '기사'로 전직했습니다. 축하합니다!");

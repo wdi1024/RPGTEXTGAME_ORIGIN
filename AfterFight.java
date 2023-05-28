@@ -17,7 +17,7 @@ public class AfterFight {
 				MyInventory.mpPotionCnt++;
 				System.out.println("마나 회복 포션 드랍");
 			}
-			if (a == 1) {
+			if (a < 15) {
 				if (heroStatus.job == "전사") {
 					if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == false)
 						System.out.println("파워 슬래시 스킬북 드랍");
@@ -178,7 +178,7 @@ public class AfterFight {
 				MyInventory.maxHpPotionCnt++;
 				System.out.println("최대체력 회복 포션 드랍");
 			}
-			if (a == 1) {
+			if (a < 15) {
 				if (heroStatus.job == "전사") {
 					if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == false)
 						System.out.println("사자의 노래 스킬북 드랍");

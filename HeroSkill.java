@@ -5,7 +5,7 @@ public class HeroSkill {
 	static boolean hasjeonsa2Skillbook(ArrayList<String> skillbook) {
 		for (String item : skillbook) {
 			if (item.equals("파워 슬래시 스킬북")) {
-				return true; 
+				return true;
 			}
 		}
 		return false;
@@ -21,7 +21,7 @@ public class HeroSkill {
 	}
 
 	static boolean hasjeonsa4Skillbook() {
-		if (heroStatus.level >= 40)
+		if (heroStatus.level >= 15)
 			return true;
 		else
 			return false;
@@ -46,7 +46,7 @@ public class HeroSkill {
 	}
 
 	static boolean hasgungsu4Skillbook() {
-		if (heroStatus.level >= 40)
+		if (heroStatus.level >= 15)
 			return true;
 		else
 			return false;
@@ -71,7 +71,7 @@ public class HeroSkill {
 	}
 
 	static boolean hasmagician4Skillbook() {
-		if (heroStatus.level >= 40)
+		if (heroStatus.level >= 15)
 			return true;
 		else
 			return false;
@@ -92,11 +92,11 @@ public class HeroSkill {
 				return true;
 			}
 		}
-		return false; 
+		return false;
 	}
 
 	static boolean hasthief4Skillbook() {
-		if (heroStatus.level >= 40)
+		if (heroStatus.level >= 15)
 			return true;
 		else
 			return false;
