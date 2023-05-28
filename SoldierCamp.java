@@ -14,11 +14,12 @@ public class SoldierCamp {
 	}
 
 	static void checkHiredSoldier() {
-		System.out.println("동행중인 용병 목록");
+		System.out.println("동행 중인 용병 목록");
 		System.out.println("-------------------------------------------");
 		for (int i = 0; i < heroStatus.solNum.size(); i++)
 			System.out.println(i + ". " + heroStatus.solNum.get(i).solName);
 		System.out.println("=====================================");
+		System.out.println("대기 중인 용병 목록");
 		for (int i = 0; i < waitingSoldier.size(); i++)
 			System.out.println(waitingSoldier.get(i).solName);
 	}

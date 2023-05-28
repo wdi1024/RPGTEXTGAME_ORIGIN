@@ -318,7 +318,7 @@ public class HeroAttack {
 			if (heroStatus.solNum.size() == 0)
 				target = 0;
 			else
-				target = r.nextInt((heroStatus.solNum.size() != 0 ? heroStatus.solNum.size() : 1));
+				target = r.nextInt(((heroStatus.solNum.size() != 0) ? (heroStatus.solNum.size() + 1) : 1));
 			if (target == heroStatus.solNum.size()) {
 				System.out.println(Monster.monsName + "이(가) " + heroStatus.name + "를 공격!");
 				heroStatus.hp = heroStatus.hp - sum;
