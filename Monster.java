@@ -54,7 +54,7 @@ public class Monster {
 			monsHp = monsHp - 0;
 		} else {
 			monsHp = monsHp + monsDefense - sum;
-			System.out.println(monsName + "가 받은 데미지는 " + sum + "입니다");
+			System.out.println(monsName + "가 받은 데미지는 " + (sum - monsDefense) + "입니다");
 		}
 	}
 }
