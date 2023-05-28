@@ -78,7 +78,7 @@ public class AfterFight {
 			}
 			if (d < 30) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 		}
 		// 일반 4
@@ -104,7 +104,7 @@ public class AfterFight {
 			}
 			if (d < 30) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 30) {
 				MyInventory.maxMpPotionCnt++;
@@ -134,7 +134,7 @@ public class AfterFight {
 			}
 			if (d < 30) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 30) {
 				MyInventory.maxHpPotionCnt++;
@@ -164,15 +164,15 @@ public class AfterFight {
 			}
 			if (d < 40) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 30) {
 				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 회복 포션 드랍");
+				System.out.println("최대마나 증강 포션 드랍");
 			}
 			if (e > 70) {
 				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 회복 포션 드랍");
+				System.out.println("최대체력 증강 포션 드랍");
 			}
 			if (a < 15) {
 				if (heroStatus.job == "전사") {
@@ -216,15 +216,15 @@ public class AfterFight {
 			}
 			if (d < 40) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 35) {
 				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 회복 포션 드랍");
+				System.out.println("최대마나 증강 포션 드랍");
 			}
 			if (e > 70) {
 				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 회복 포션 드랍");
+				System.out.println("최대체력 증강 포션 드랍");
 			}
 		}
 		// 일반 8
@@ -250,15 +250,15 @@ public class AfterFight {
 			}
 			if (d < 40) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 35) {
 				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 회복 포션 드랍");
+				System.out.println("최대마나 증강 포션 드랍");
 			}
 			if (e > 70) {
 				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 회복 포션 드랍");
+				System.out.println("최대체력 증강 포션 드랍");
 			}
 		}
 		// 일반 9
@@ -285,15 +285,15 @@ public class AfterFight {
 			}
 			if (d < 50) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 40) {
 				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 회복 포션 드랍");
+				System.out.println("최대마나 증강 포션 드랍");
 			}
 			if (f < 40) {
 				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 회복 포션 드랍");
+				System.out.println("최대체력 증강 포션 드랍");
 			}
 		}
 		// 일반 10
@@ -320,15 +320,15 @@ public class AfterFight {
 			}
 			if (d < 50) {
 				MyInventory.magicPotionCnt++;
-				System.out.println("마력 회복 포션 드랍");
+				System.out.println("마력 증강 포션 드랍");
 			}
 			if (e < 50) {
 				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 회복 포션 드랍");
+				System.out.println("최대마나 증강 포션 드랍");
 			}
 			if (f < 40) {
 				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 회복 포션 드랍");
+				System.out.println("최대체력 증강 포션 드랍");
 			}
 		}
 		// 보스 1
