@@ -23,6 +23,7 @@ public class SoldierCamp {
 		System.out.println("-------------------------------------------");
 		for (int i = 0; i < heroStatus.solNum.size(); i++)
 			System.out.println(i + ". " + heroStatus.solNum.get(i).solName);
+		System.out.println("=====================================");
 	}
 
 	static void checkWaitingSoldier() {
