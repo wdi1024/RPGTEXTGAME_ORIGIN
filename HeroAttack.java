@@ -50,13 +50,13 @@ public class HeroAttack {
 				System.out.println("1. 쓰러스트");
 				if (HeroSkill.hasjeonsa2Skillbook(MyInventory.skillbook) == true) { // 히어로 스킬에서 스킬북으로 스킬 배웠는지 true
 																					// false로 구분
-					System.out.println("2. 파워 슬래시");
+					System.out.println("2. 파워 슬래시(mp-2)");
 				}
 				if (HeroSkill.hasjeonsa3Skillbook(MyInventory.skillbook) == true) {
-					System.out.println("3. 사자의 노래");
+					System.out.println("3. 사자의 노래(mp-4)");
 				}
 				if (HeroSkill.hasjeonsa4Skillbook()) {
-					System.out.println("4. 신검합일");
+					System.out.println("4. 신검합일(mp-10)");
 				}
 				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
@@ -114,13 +114,13 @@ public class HeroAttack {
 				System.out.println("1. 과녁맞히기");
 				if (HeroSkill.hasgungsu2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
 																					// 구분
-					System.out.println("2. 더블 샷");
+					System.out.println("2. 더블 샷(mp-2)");
 				}
 				if (HeroSkill.hasgungsu3Skillbook(MyInventory.skillbook) == true) {
-					System.out.println("3. 화살비");
+					System.out.println("3. 화살비(mp-4)");
 				}
 				if (HeroSkill.hasgungsu4Skillbook()) {
-					System.out.println("4. 폭풍의 시");
+					System.out.println("4. 폭풍의 시(mp-10)");
 				}
 				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
@@ -178,13 +178,13 @@ public class HeroAttack {
 				System.out.println("1. 매직클로");
 				if (HeroSkill.hasmagician2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true /
 																						// false로 구분
-					System.out.println("2. 기원참 스킬");
+					System.out.println("2. 기원참 스킬(mp-2)");
 				}
 				if (HeroSkill.hasmagician3Skillbook(MyInventory.skillbook) == true) {
-					System.out.println("3. 파괴광선 스킬");
+					System.out.println("3. 파괴광선 스킬(mp-4)");
 				}
 				if (HeroSkill.hasmagician4Skillbook()) {
-					System.out.println("4. 엘레멘탈 버스트 스킬");
+					System.out.println("4. 엘레멘탈 버스트 스킬(mp-10)");
 				}
 				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
@@ -242,13 +242,13 @@ public class HeroAttack {
 				System.out.println("1. 표창던지기");
 				if (HeroSkill.hasthief2Skillbook(MyInventory.skillbook) == true) {// 히어로 스킬에서 스킬북으로 스킬 배웠는지 true false로
 																					// 구분
-					System.out.println("2. 새비지 블로우");
+					System.out.println("2. 새비지 블로우(mp-2)");
 				}
 				if (HeroSkill.hasthief3Skillbook(MyInventory.skillbook) == true) {
-					System.out.println("3. 암살 스킬");
+					System.out.println("3. 암살 스킬(mp-4)");
 				}
 				if (HeroSkill.hasthief4Skillbook()) {
-					System.out.println("4. 사우전드 나이프 스킬");
+					System.out.println("4. 사우전드 나이프 스킬(mp-10)");
 				}
 				System.out.printf("사용할 스킬을 선택해주세요 : ");
 				attackSelect = in.nextInt();
