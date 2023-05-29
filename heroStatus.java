@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class heroStatus {
 	static String name, job;
-	static int hp, maxHp, mp, maxMp, power, magic, selection = 0, money = 100000, exp = 0, level = 1;
+	static int hp, maxHp, mp, maxMp, power, magic, selection = 0, money = 100, exp = 0, level = 1;
 	static ArrayList<solClass> solNum = new ArrayList<solClass>();
 	static Scanner in = new Scanner(System.in);
 
