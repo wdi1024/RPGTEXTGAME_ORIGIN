@@ -388,7 +388,7 @@ public class SelectingDungeon {
 				if (Monster.monsHp > 0)
 					continue;
 
-				monster = new Dragon();
+				monster = new KingofDemon();
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
 					Thread.sleep(500);
@@ -399,7 +399,7 @@ public class SelectingDungeon {
 				heroStatus.checkLevelup();
 				if (Monster.monsHp > 0)
 					continue;
-				monster = new Dragon();
+				monster = new DeadLord();
 				System.out.println("=====================================");
 				for (int i = 0; i < 3; i++) {
 					Thread.sleep(500);

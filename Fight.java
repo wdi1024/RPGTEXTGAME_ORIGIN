@@ -81,6 +81,11 @@ public class Fight {
 				System.out.println("====================================");
 				if (selection == 0) {
 					heroStatus.printStatus();
+					System.out.println(Monster.monsName);
+					System.out.println("HP = " + Monster.monsHp);
+					System.out.println("Power = " + Monster.monsPower);
+					System.out.println("Defense = " + Monster.monsDefense);
+					System.out.println("====================================");
 				} else if (selection == 1) {
 					++cnt;
 					HeroAttack.StartHeroAttack();
