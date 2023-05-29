@@ -14,30 +14,6 @@ public class Monster {
 		Monster.monsExp = exp;
 	}
 
-	public String getName() {
-		return monsName;
-	}
-
-	public int getHp() {
-		return monsHp;
-	}
-
-	public int getPower() {
-		return monsPower;
-	}
-
-	public int getDefense() {
-		return monsDefense;
-	}
-
-	public int getMoney() {
-		return monsMoney;
-	}
-
-	public int getExp() {
-		return monsExp;
-	}
-
 	static int monsterAttack(int monster_power) {
 		int sum = 0;
 		if (monster_power < 0) {

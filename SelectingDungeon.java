@@ -1,457 +1,419 @@
 import java.util.Random;
+import java.util.Scanner;
 
-public class AfterFight {
+public class SelectingDungeon {
 
-	static void Drop() {
-		// 일반 1
-		if (Monster.monsName == "고양이") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
+	static int dungeonNum;
+	static boolean isItBossDungeon;
 
-			if (a < 40) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 40) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (a < 15) {
-				if (heroStatus.job == "전사") {
-					System.out.println("파워 슬래시 스킬북 드랍");
-					MyInventory.addItem("파워 슬래시 스킬북");
+	static void StartDungeon() throws InterruptedException {
+		Scanner in = new Scanner(System.in);
+		Random random = new Random();
+
+		while (true) {
+			System.out.println("0. 돌아가기\n1. 신비의 숲\n2. 빛 바랜 성\n3. 화염의 강\n4. 세계의 끝\n5. (보스) 파괴의 사원");
+			System.out.print("\n던전 번호를 선택하세요 (0 선택 시 복귀) : ");
+			dungeonNum = in.nextInt();
+			System.out.println("====================================");
+
+			if (dungeonNum == 0) {
+				System.out.println("왔던 곳으로 돌아갑니다.");
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					Thread.sleep(500);
+					System.out.print(".");
 				}
-				if (heroStatus.job == "궁수") {
-					System.out.println("더블 샷 스킬북 드랍");
-					MyInventory.addItem("더블 샷 스킬북");
-				}
-				if (heroStatus.job == "마법사") {
-					System.out.println("기원참 스킬북 드랍");
-					MyInventory.addItem("기원참 스킬북");
-				}
-				if (heroStatus.job == "도적") {
-					System.out.println("새비지 블로우 스킬북 드랍");
-					MyInventory.addItem("새비지 블로우 스킬북");
-				}
+				System.out.println("마을에 도착했습니다.");
+				System.out.println("=====================================");
+				break;
 			}
-		}
-		// 일반 2
-		if (Monster.monsName == "고블린") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
+			// 던전 1
+			if (dungeonNum == 1) {
+				if (heroStatus.solNum.size() >= 4) {
+					System.out.println("일반 던전은 동료를 3명까지만 데리고 올 수 있습니다.");
+					System.out.println("=====================================");
+				} else {
+					System.out.println("----- 신비의 숲 -----");
+					Monster monster;
+//					int cat = 60; 				
+//					int goblin = 40; 			
 
-			if (a < 40) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 20) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 40) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-		}
-		// 일반 3
-		if (Monster.monsName == "골렘") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
+					int randomValue = random.nextInt(100);
+					if (randomValue < 60) {
+						monster = new Cat();
+					} else {
+						monster = new Goblin();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("! ");
+					System.out.println("신비의 숲에 입장했습니다. ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
 
-			if (a < 40) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 20) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 40) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 30) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-		}
-		// 일반 4
-		if (Monster.monsName == "스파이더") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
+					if (Monster.monsHp > 0)
+						continue;
 
-			if (a < 40) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 20) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 40) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 30) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 30) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-		}
-		// 일반 5
-		if (Monster.monsName == "켄타우로스") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
+					randomValue = random.nextInt(100);
+					if (randomValue < 60) {
+						monster = new Cat();
+					} else {
+						monster = new Goblin();
+					}
 
-			if (a < 40) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 20) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 40) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 30) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 30) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-		}
-		// 일반 6
-		if (Monster.monsName == "구울") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
 
-			if (a < 50) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 30) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 50) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 40) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 30) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-			if (e > 70) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-			if (a < 15) {
-				if (heroStatus.job == "전사") {
-					System.out.println("사자의 노래 스킬북 드랍");
-					MyInventory.addItem("사자의 노래 스킬북");
-				}
-				if (heroStatus.job == "궁수") {
-					System.out.println("화살비 스킬북 드랍");
-					MyInventory.addItem("화살비 스킬북");
-				}
-				if (heroStatus.job == "마법사") {
-					System.out.println("파괴광선 스킬북 드랍");
-					MyInventory.addItem("파괴광선 스킬북");
-				}
-				if (heroStatus.job == "도적") {
-					System.out.println("암살 스킬북 드랍");
-					MyInventory.addItem("암살 스킬북");
+					if (Monster.monsHp > 0)
+						continue;
+
+					randomValue = random.nextInt(100);
+					if (randomValue < 60) {
+						monster = new Cat();
+					} else {
+						monster = new Goblin();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+					System.out.println("=====================================");
 				}
 			}
-		}
-		// 일반 7
-		if (Monster.monsName == "네크로실") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
+			// 던전 2
+			if (dungeonNum == 2) {
+				if (heroStatus.solNum.size() >= 4) {
+					System.out.println("일반 던전은 동료를 3명까지만 데리고 올 수 있습니다.");
+					System.out.println("=====================================");
+				} else {
+					System.out.println("----- 빛 바랜 성 -----.");
+					Monster monster;
+//					int cat = 40; 				
+//					int goblin = 30; 			
+//					int golem = 20;
+//					int spider = 10;
 
-			if (a < 50) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 40) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 50) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 40) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 35) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-			if (e > 70) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-		}
-		// 일반 8
-		if (Monster.monsName == "어비스마스터") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
+					int randomValue = random.nextInt(100);
+					if (randomValue < 40) {
+						monster = new Cat();
+					} else if (randomValue >= 40 && randomValue < 70) {
+						monster = new Goblin();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Golem();
+					} else {
+						monster = new Spider();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("! ");
+					System.out.println("빛 바랜 성에 입장했습니다. ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
 
-			if (a < 60) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 40) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 60) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 40) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 35) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-			if (e > 70) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-		}
-		// 일반 9
-		if (Monster.monsName == "블러드레이븐") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
-			int f = random.nextInt(100);
+					if (Monster.monsHp > 0)
+						continue;
 
-			if (a < 60) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 40) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 60) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 50) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 40) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-			if (f < 40) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-		}
-		// 일반 10
-		if (Monster.monsName == "다크사이클론") {
-			Random random = new Random();
-			int a = random.nextInt(100);
-			int b = random.nextInt(100);
-			int c = random.nextInt(100);
-			int d = random.nextInt(100);
-			int e = random.nextInt(100);
-			int f = random.nextInt(100);
+					randomValue = random.nextInt(100);
+					if (randomValue < 40) {
+						monster = new Cat();
+					} else if (randomValue >= 40 && randomValue < 70) {
+						monster = new Goblin();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Golem();
+					} else {
+						monster = new Spider();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
 
-			if (a < 60) {
-				MyInventory.hpPotionCnt++;
-				System.out.println("체력 회복 포션 드랍");
-			}
-			if (b < 40) {
-				MyInventory.powerPotionCnt++;
-				System.out.println("파워 증강 포션 드랍");
-			}
-			if (c < 60) {
-				MyInventory.mpPotionCnt++;
-				System.out.println("마나 회복 포션 드랍");
-			}
-			if (d < 50) {
-				MyInventory.magicPotionCnt++;
-				System.out.println("마력 증강 포션 드랍");
-			}
-			if (e < 50) {
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대마나 증강 포션 드랍");
-			}
-			if (f < 40) {
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대체력 증강 포션 드랍");
-			}
-		}
-		// 보스 1
-		if (Monster.monsName == "철갑 드래곤") {
-			Random random = new Random();
-			int randomNumber = random.nextInt(100);
-			int randomhp = random.nextInt(10) + 6; // 6 to 15
-			int randompw = random.nextInt(5) + 2; // 2 to 6
+					if (Monster.monsHp > 0)
+						continue;
 
-			int cnt = 0;
-			for (int i = 5; i < randomhp; i++) {
-				MyInventory.hpPotionCnt++;
-				cnt++;
+					randomValue = random.nextInt(100);
+					if (randomValue < 40) {
+						monster = new Cat();
+					} else if (randomValue >= 40 && randomValue < 70) {
+						monster = new Goblin();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Golem();
+					} else {
+						monster = new Spider();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+					System.out.println("=====================================");
+				}
 			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
+			// 던전 3
+			if (dungeonNum == 3) {
+				if (heroStatus.solNum.size() >= 4) {
+					System.out.println("일반 던전은 동료를 3명까지만 데리고 올 수 있습니다.");
+					System.out.println("=====================================");
+				} else {
+					System.out.println("----- 화염의 강 -----");
+					Monster monster;
+//					int golem = 30; 				
+//					int spider = 20; 			
+//					int centaurus = 20;
+//					int ghoul = 20;
+//					int necrosyl = 10;
 
-			cnt = 0;
-			for (int i = 5; i < randomhp; i++) {
-				MyInventory.mpPotionCnt++;
-				cnt++;
+					int randomValue = random.nextInt(100);
+					if (randomValue < 30) {
+						monster = new Golem();
+					} else if (randomValue >= 30 && randomValue < 50) {
+						monster = new Spider();
+					} else if (randomValue >= 50 && randomValue < 70) {
+						monster = new Centaurus();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Ghoul();
+					} else {
+						monster = new Necrosyl();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("! ");
+					System.out.println("화염의 강에 입장했습니다. ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+
+					if (Monster.monsHp > 0)
+						continue;
+
+					randomValue = random.nextInt(100);
+					if (randomValue < 30) {
+						monster = new Golem();
+					} else if (randomValue >= 30 && randomValue < 50) {
+						monster = new Spider();
+					} else if (randomValue >= 50 && randomValue < 70) {
+						monster = new Centaurus();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Ghoul();
+					} else {
+						monster = new Necrosyl();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+
+					if (Monster.monsHp > 0)
+						continue;
+
+					randomValue = random.nextInt(100);
+					if (randomValue < 30) {
+						monster = new Golem();
+					} else if (randomValue >= 30 && randomValue < 50) {
+						monster = new Spider();
+					} else if (randomValue >= 50 && randomValue < 70) {
+						monster = new Centaurus();
+					} else if (randomValue >= 70 && randomValue < 90) {
+						monster = new Ghoul();
+					} else {
+						monster = new Necrosyl();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+					System.out.println("=====================================");
+				}
+
 			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
+			// 던전 4
+			if (dungeonNum == 4) {
+				if (heroStatus.solNum.size() >= 4) {
+					System.out.println("일반 던전은 동료를 3명까지만 데리고 올 수 있습니다.");
+					System.out.println("=====================================");
+				} else {
+					System.out.println("----- 세계의 끝 -----.");
+					Monster monster;
+//					int ghoul = 20;
+//					int necrosyl = 20;
+//					int abyssmaster = 20; 				
+//					int bloodraven = 20;
+//					int darkcyclone = 20; 
 
-			cnt = 0;
-			for (int i = 0; i < randompw; i++) {
-				MyInventory.powerPotionCnt++;
-				cnt++;
+					int randomValue = random.nextInt(100);
+					if (randomValue < 20) {
+						monster = new Ghoul();
+					} else if (randomValue >= 20 && randomValue < 40) {
+						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("! ");
+					System.out.println("세계의 끝에 입장했습니다. ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+
+					if (Monster.monsHp > 0)
+						continue;
+
+					randomValue = random.nextInt(100);
+					if (randomValue < 20) {
+						monster = new Ghoul();
+					} else if (randomValue >= 20 && randomValue < 40) {
+						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+
+					if (Monster.monsHp > 0)
+						continue;
+
+					randomValue = random.nextInt(100);
+					if (randomValue < 20) {
+						monster = new Ghoul();
+					} else if (randomValue >= 20 && randomValue < 40) {
+						monster = new Necrosyl();
+					} else if (randomValue >= 40 && randomValue < 60) {
+						monster = new Abyssmaster();
+					} else if (randomValue >= 60 && randomValue < 80) {
+						monster = new Bloodraven();
+					} else {
+						monster = new Darkcyclone();
+					}
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.print("! ");
+					Fight.selectAttack();
+					heroStatus.checkLevelup();
+					System.out.println("=====================================");
+					for (int i = 0; i < 3; i++) {
+						Thread.sleep(500);
+						System.out.print(".");
+					}
+					System.out.println("!\n던전 공략을 완료하여 던전 입구로 돌아갑니다.");
+					System.out.println("=====================================");
+				}
+
 			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
+			// 보스던전
+			if (dungeonNum == 5) {
+				System.out.println("----- (보스) 파괴의 사원 -----.");
+				isItBossDungeon = true;
 
-			if (randomNumber < 50) {
-				MyInventory.maxHpPotionCnt++;
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대 체력 증강 포션 드랍");
-			}
+				Monster monster = new Dragon();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					Thread.sleep(500);
+					System.out.print(".");
+				}
+				System.out.println("! ");
+				System.out.println("보스 던전에 입장했습니다. ");
+				Fight.selectAttack();
+				heroStatus.checkLevelup();
+				if (Monster.monsHp > 0)
+					continue;
 
-			if (randomNumber < 50) {
-				MyInventory.maxMpPotionCnt++;
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대 마나 증강 포션 드랍");
-			}
-		}
-		// 보스 2
-		if (Monster.monsName == "불멸의 악마왕") {
-			Random random = new Random();
-			int randomNumber = random.nextInt(100);
-			int randomhp = random.nextInt(5) + 2; // 2 to 6
-			int randommp = random.nextInt(5) + 2; // 2 to 6
-			int randompw = random.nextInt(5) + 2; // 2 to 6
-
-			int cnt = 0;
-			for (int i = 0; i < randomhp; i++) {
-				MyInventory.hpPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
-
-			cnt = 0;
-			for (int i = 0; i < randommp; i++) {
-				MyInventory.mpPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
-
-			cnt = 0;
-			for (int i = 0; i < randompw; i++) {
-				MyInventory.powerPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
-
-			if (randomNumber < 50) {
-				MyInventory.maxHpPotionCnt++;
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대 체력 증강 포션 드랍");
-			}
-
-			if (randomNumber < 50) {
-				MyInventory.maxMpPotionCnt++;
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대 마나 증강 포션 드랍");
-			}
-		}
-		// 보스 3
-		if (Monster.monsName == "죽음의 그림자 군주") {
-			Random random = new Random();
-			int randomNumber = random.nextInt(100);
-			int randomhp = random.nextInt(6) + 5; // 5 to 10
-			int randommp = random.nextInt(6) + 5; // 6 to 10
-			int randompw = random.nextInt(4) + 5; // 5 to 8
-
-			int cnt = 0;
-			for (int i = 0; i < randomhp; i++) {
-				MyInventory.hpPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("체력 회복 포션 드랍 (%d개)\n", cnt);
-
-			cnt = 0;
-			for (int i = 0; i < randommp; i++) {
-				MyInventory.mpPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("마나 회복 포션 드랍 (%d개)\n", cnt);
-
-			cnt = 0;
-			for (int i = 0; i < randompw; i++) {
-				MyInventory.powerPotionCnt++;
-				cnt++;
-			}
-			System.out.printf("힘 증강 포션 드랍 (%d개)\n", cnt);
-
-			if (randomNumber < 50) {
-				MyInventory.maxHpPotionCnt++;
-				MyInventory.maxHpPotionCnt++;
-				System.out.println("최대 체력 증강 포션 드랍");
-			}
-
-			if (randomNumber < 50) {
-				MyInventory.maxMpPotionCnt++;
-				MyInventory.maxMpPotionCnt++;
-				System.out.println("최대 마나 증강 포션 드랍");
+				monster = new Dragon();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					Thread.sleep(500);
+					System.out.print(".");
+				}
+				System.out.print("! ");
+				Fight.selectAttack();
+				heroStatus.checkLevelup();
+				if (Monster.monsHp > 0)
+					continue;
+				monster = new Dragon();
+				System.out.println("=====================================");
+				for (int i = 0; i < 3; i++) {
+					Thread.sleep(500);
+					System.out.print(".");
+				}
+				System.out.print("! ");
+				Fight.selectAttack();
+				heroStatus.checkLevelup();
+				if (Monster.monsHp <= 0) {
+					Home.boss_clear = 1;
+					break;
+				}
 			}
 		}
 	}
+
 }
